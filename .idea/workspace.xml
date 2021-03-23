@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Instructions/3.Установка Maven.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Instructions/4. Установка IDE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Instructions/5. Создание проекта из архетипа.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Instructions/2.Установка JDK.md" beforeDir="false" afterPath="$PROJECT_DIR$/Instructions/2.Установка JDK.md" afterDir="false" />
-    </list>
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,30 +11,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/UIAutoTest/Pages/SearchPage/SearchPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/UIAutoTest/DefaultSteps/WebDriverInit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/UIAutoTest/DefaultSteps/AfterSteps.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,11 +95,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Instructions/6. Создание локального репозитория. Связка локального репозитория с удаленным репозиторием.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="680">
+                <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Instructions/7. Добавление зависимостей Maven и настройка Pom.xml.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="312">
+                <caret line="206" column="21" selection-start-line="206" selection-start-column="21" selection-end-line="206" selection-end-column="21" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Instructions/8. Создание класса для запуска автотестов.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="357">
+                <caret line="21" column="85" lean-forward="true" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -180,10 +176,13 @@
         <option value="$PROJECT_DIR$/src/main/java/UIAutoTest/DefaultSteps/AfterSteps.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Instructions/1.Установка GIT.md" />
-        <option value="$PROJECT_DIR$/Instructions/2.Установка JDK.md" />
         <option value="$PROJECT_DIR$/Instructions/3.Установка Maven.md" />
         <option value="$PROJECT_DIR$/Instructions/4. Установка IDE.md" />
         <option value="$PROJECT_DIR$/Instructions/5. Создание проекта из архетипа.md" />
+        <option value="$PROJECT_DIR$/Instructions/6. Создание локального репозитория. Связка локального репозитория с удаленным репозиторием.md" />
+        <option value="$PROJECT_DIR$/Instructions/7. Добавление зависимостей Maven и настройка Pom.xml.md" />
+        <option value="$PROJECT_DIR$/Instructions/8. Создание класса для запуска автотестов.md" />
+        <option value="$PROJECT_DIR$/Instructions/2.Установка JDK.md" />
       </list>
     </option>
   </component>
@@ -358,7 +357,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616516396446" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616516561857" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -474,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616515397042</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="еще инструкции">
+      <created>1616516418730</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616516418730</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -513,7 +519,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28198293" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28198293" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -530,7 +536,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32577905" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.34674063" side_tool="true" weight="0.32808024" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="SOQL Query" order="10" />
       <window_info anchor="bottom" id="Log Analyzer" order="11" />
       <window_info anchor="bottom" id="Anonymous Apex" order="12" />
@@ -554,7 +560,8 @@
     <MESSAGE value="Добавление утилиты для парсинга свойств" />
     <MESSAGE value="Конфигурирование Maven:&#10;параллельный и непараллельный запуск.&#10;Аллур отчет" />
     <MESSAGE value="Инструкции" />
-    <option name="LAST_COMMIT_MESSAGE" value="Инструкции" />
+    <MESSAGE value="еще инструкции" />
+    <option name="LAST_COMMIT_MESSAGE" value="еще инструкции" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -860,7 +867,29 @@
     <entry file="file://$PROJECT_DIR$/Instructions/6. Создание локального репозитория. Связка локального репозитория с удаленным репозиторием.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="680">
+            <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Instructions/7. Добавление зависимостей Maven и настройка Pom.xml.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="312">
+            <caret line="206" column="21" selection-start-line="206" selection-start-column="21" selection-end-line="206" selection-end-column="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Instructions/8. Создание класса для запуска автотестов.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="357">
+            <caret line="21" column="85" lean-forward="true" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
