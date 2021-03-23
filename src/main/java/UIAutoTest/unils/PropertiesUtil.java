@@ -80,7 +80,7 @@ public class PropertiesUtil implements AutoCloseable{
      * @param property - название свойства
      * @return - значение свойства
      */
-    public static String get(String property) {
+    public static String getProperty(String property) {
         return getInstance().getProp(property);
     }
 
