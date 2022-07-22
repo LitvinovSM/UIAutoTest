@@ -19,6 +19,7 @@
     <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
     <aspectj.version>1.8.10</aspectj.version>
     <allure-junit4.version>2.6.0</allure-junit4.version>
+    <selenium.versions>4.3.0</selenium.versions>
   </properties>
 
   <dependencies>
@@ -43,17 +44,27 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-api</artifactId>
-      <version>3.14.0</version>
+      <version>${selenium.versions}</version>
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-ie-driver</artifactId>
-      <version>3.14.0</version>
+      <artifactId>selenium-edge-driver</artifactId>
+      <version>${selenium.versions}</version>
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-chrome-driver</artifactId>
-      <version>3.14.0</version>
+      <version>${selenium.versions}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-safari-driver</artifactId>
+      <version>${selenium.versions}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-firefox-driver</artifactId>
+      <version>${selenium.versions}</version>
     </dependency>
     <dependency>
       <groupId>io.github.bonigarcia</groupId>

@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="еще инструкции">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/UI/actions/DriverActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Восстановил проект, проапдейтил зависимости">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/API/Users/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/API/Users/UserActions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/UI/Pages/Telegram/TelegramWebActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/UI/Pages/Telegram/TelegramWebElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/UI/Pages/Telegram/TelegramWebElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/REST урок.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/UI/actions/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/UI/actions/DriverActions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +96,11 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
     <option name="enabledProfiles">
       <list>
         <option value="NonParallel" />
@@ -319,7 +315,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "File.Encoding"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -445,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616516594669</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Восстановил проект, проапдейтил зависимости">
+      <created>1658509229746</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658509229746</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -579,7 +582,8 @@
     <MESSAGE value="Конфигурирование Maven:&#10;параллельный и непараллельный запуск.&#10;Аллур отчет" />
     <MESSAGE value="Инструкции" />
     <MESSAGE value="еще инструкции" />
-    <option name="LAST_COMMIT_MESSAGE" value="еще инструкции" />
+    <MESSAGE value="Восстановил проект, проапдейтил зависимости" />
+    <option name="LAST_COMMIT_MESSAGE" value="Восстановил проект, проапдейтил зависимости" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
