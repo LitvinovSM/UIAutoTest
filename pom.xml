@@ -14,12 +14,13 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.17</maven.compiler.source>
-    <maven.compiler.target>1.17</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
     <aspectj.version>1.8.10</aspectj.version>
     <allure-junit4.version>2.6.0</allure-junit4.version>
     <selenium.versions>4.3.0</selenium.versions>
+    <cucumber.versions>7.4.0</cucumber.versions>
   </properties>
 
   <dependencies>
@@ -27,17 +28,17 @@
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>7.4.1</version>
+      <version>${cucumber.versions}</version>
     </dependency>
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-core</artifactId>
-      <version>7.4.1</version>
+      <version>${cucumber.versions}</version>
     </dependency>
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-junit</artifactId>
-      <version>7.4.1</version>
+      <version>${cucumber.versions}</version>
     </dependency>
 
     <!--Селениум-->
@@ -76,13 +77,13 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-support</artifactId>
-      <version>3.141.59</version>
+      <version>${selenium.versions}</version>
     </dependency>
     <!--JUnit-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.2</version>
     </dependency>
     <!--Allure отчеты-->
     <dependency>
@@ -121,7 +122,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.18</version>
+      <version>1.18.22</version>
     </dependency>
     <dependency>
       <groupId>org.assertj</groupId>
@@ -241,7 +242,7 @@
               <!--Количество перезапусков упавших тестов - борьба с нестабильностью теста-->
               <rerunFailingTestsCount>2</rerunFailingTestsCount>
               <!--Количество потоков-->
-              <forkCount>12</forkCount>
+              <forkCount>4</forkCount>
               <!--Признак переиспользования потоков-->
               <reuseForks>false</reuseForks>
               <!--Название классов которые запускать. В namingPattern хранится то, как классы будут создаваться-->

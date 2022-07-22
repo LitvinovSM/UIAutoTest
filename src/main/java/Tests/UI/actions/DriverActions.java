@@ -23,22 +23,36 @@ public class DriverActions {
     private final String SAFARI = "safari";
     private final String FIREFOX = "firefox";
     private final String EDGE = "edge";
-    String driverType = "firefox";
+    private final String REMOTE_LAUNCH = "remote";
+    private final String LOCAL_LAUNCH = "local";
+    String driverType = "chrome";
+    String launchType = "local";
 
     /**
      * экземпляр вебдрайвера который будет использован в дальнейшем
      */
-    private WebDriver driver = getDriverByType(driverType);
-    /**
+    private WebDriver webDriver = getWebDriverByType(driverType);
+    /**\
      * экземпляр удаленного вебдрайвера который будет использован в дальнейшем при тестах в контейнере
      */
-    private RemoteWebDriver remoteWebDriver;
+    private RemoteWebDriver remoteWebDriver =getRemoteWebDriver(driverType);
 
     public WebDriver getDriver() {
+        WebDriver driver;
+        switch (launchType){
+            case REMOTE_LAUNCH:
+                driver = (WebDriver) remoteWebDriver;
+            break;
+            case LOCAL_LAUNCH:
+                driver= webDriver;
+                break;
+            default:
+                driver=null;
+        }
         return driver;
     }
 
-    public WebDriver getDriverByType(String driverType) {
+    public WebDriver getWebDriverByType(String driverType) {
         WebDriver driver;
         switch (driverType) {
             case CHROME:
@@ -63,7 +77,7 @@ public class DriverActions {
         return driver;
     }
 
-    private RemoteWebDriver getRemoteWebDriver() {
+    private RemoteWebDriver getRemoteWebDriver(String driverType) {
         RemoteWebDriver remoteWebDriver;
         remoteWebDriver = new RemoteWebDriver(setCapabilities(driverType));
         return remoteWebDriver;
