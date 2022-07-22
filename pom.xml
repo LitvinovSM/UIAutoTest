@@ -14,8 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.17</maven.compiler.source>
+    <maven.compiler.target>1.17</maven.compiler.target>
     <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
     <aspectj.version>1.8.10</aspectj.version>
     <allure-junit4.version>2.6.0</allure-junit4.version>
@@ -26,17 +26,17 @@
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>2.4.0</version>
+      <version>7.4.1</version>
     </dependency>
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-core</artifactId>
-      <version>2.4.0</version>
+      <version>7.4.1</version>
     </dependency>
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-junit</artifactId>
-      <version>2.4.0</version>
+      <version>7.4.1</version>
     </dependency>
 
     <!--Селениум-->
@@ -55,6 +55,12 @@
       <artifactId>selenium-chrome-driver</artifactId>
       <version>3.14.0</version>
     </dependency>
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.2.0</version>
+    </dependency>
+
     <!--Page Factory селениума-->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
