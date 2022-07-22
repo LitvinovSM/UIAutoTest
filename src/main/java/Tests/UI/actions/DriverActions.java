@@ -25,26 +25,28 @@ public class DriverActions {
     private final String EDGE = "edge";
     private final String REMOTE_LAUNCH = "remote";
     private final String LOCAL_LAUNCH = "local";
+
+
     String driverType = "chrome";
     String launchType = "local";
 
     /**
      * экземпляр вебдрайвера который будет использован в дальнейшем
      */
-    private WebDriver webDriver = getWebDriverByType(driverType);
+    private WebDriver webDriver;
     /**\
      * экземпляр удаленного вебдрайвера который будет использован в дальнейшем при тестах в контейнере
      */
-    private RemoteWebDriver remoteWebDriver =getRemoteWebDriver(driverType);
+    private RemoteWebDriver remoteWebDriver;
 
     public WebDriver getDriver() {
         WebDriver driver;
         switch (launchType){
             case REMOTE_LAUNCH:
-                driver = (WebDriver) remoteWebDriver;
+                driver = (WebDriver) getRemoteWebDriver(driverType);
             break;
             case LOCAL_LAUNCH:
-                driver= webDriver;
+                driver= getWebDriverByType(driverType);
                 break;
             default:
                 driver=null;

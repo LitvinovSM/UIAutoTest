@@ -7,11 +7,10 @@ import io.cucumber.java.ru.И;
 import org.openqa.selenium.WebDriver;
 
 public class TelegramWebActions extends TelegramWebElements {
-   static WebDriver DRIVER = new DriverActions().getDriver();
+   static WebDriver DRIVER= new DriverActions().getDriver();
 
    @BeforeAll
    public static void bef(){
-
    }
 
     @И("^открывает телеграмм веб")
