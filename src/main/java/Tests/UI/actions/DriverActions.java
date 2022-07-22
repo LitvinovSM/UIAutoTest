@@ -28,7 +28,7 @@ public class DriverActions {
 
 
     String driverType = "chrome";
-    String launchType = "local";
+    String launchType = "remote";
 
     /**
      * экземпляр вебдрайвера который будет использован в дальнейшем
@@ -39,11 +39,12 @@ public class DriverActions {
      */
     private RemoteWebDriver remoteWebDriver;
 
-    public WebDriver getDriver() {
+    public WebDriver getDriver() throws InterruptedException {
         WebDriver driver;
         switch (launchType){
             case REMOTE_LAUNCH:
                 driver = (WebDriver) getRemoteWebDriver(driverType);
+                Thread.sleep(5000);
             break;
             case LOCAL_LAUNCH:
                 driver= getWebDriverByType(driverType);

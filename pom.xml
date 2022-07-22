@@ -20,7 +20,7 @@
     <aspectj.version>1.8.10</aspectj.version>
     <allure-junit4.version>2.6.0</allure-junit4.version>
     <selenium.versions>4.3.0</selenium.versions>
-    <cucumber.versions>7.4.1</cucumber.versions>
+    <cucumber.versions>4.2.5</cucumber.versions>
   </properties>
 
   <dependencies>
@@ -222,7 +222,7 @@
                   </tags>
                   <glue>
                     <!--Пакет с шагами тестов-->
-                    <package>UIAutoTest</package>
+                    <package>Tests</package>
                   </glue>
                   <outputDirectory>target/generated-test-sources/cucumber</outputDirectory>
                   <featuresDirectory>src/test/resources/</featuresDirectory>
