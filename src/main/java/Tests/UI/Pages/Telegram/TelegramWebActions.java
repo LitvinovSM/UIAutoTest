@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 
 public class TelegramWebActions extends TelegramWebElements {
 
-
-
     @И("^открывает телеграмм веб$")
     public void открываетТелеграммВеб() throws InterruptedException {
         WebDriver DRIVER = new DriverActions().getDriver();

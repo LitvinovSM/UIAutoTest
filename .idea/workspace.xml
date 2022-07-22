@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Восстановил проект, проапдейтил зависимости">
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Больше драйверов и обновленный селениум">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб1.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб2.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/UI/Pages/Telegram/TelegramWebActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tests/UI/actions/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/UI/actions/DriverActions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -311,7 +313,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/MySpace/Coding/UIAutoTests/UIAutoTest",
+    "last_opened_file_path": "C:/MySpace/Coding/UIAutoTests/UIAutoTest/src/test/resources/features/UI",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -319,18 +321,19 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest\src\test\resources\features\UI" />
+      <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\API" />
+      <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\config" />
+      <recent name="C:\My Space\AutoTest\UIAutoTest\Instructions" />
+      <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\UI" />
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\REST" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\API" />
-      <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\config" />
-      <recent name="C:\My Space\AutoTest\UIAutoTest\Instructions" />
-      <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.Cucumber Test">
@@ -448,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658509229746</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Больше драйверов и обновленный селениум">
+      <created>1658511179587</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658511179587</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -583,7 +593,8 @@
     <MESSAGE value="Инструкции" />
     <MESSAGE value="еще инструкции" />
     <MESSAGE value="Восстановил проект, проапдейтил зависимости" />
-    <option name="LAST_COMMIT_MESSAGE" value="Восстановил проект, проапдейтил зависимости" />
+    <MESSAGE value="Больше драйверов и обновленный селениум" />
+    <option name="LAST_COMMIT_MESSAGE" value="Больше драйверов и обновленный селениум" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
