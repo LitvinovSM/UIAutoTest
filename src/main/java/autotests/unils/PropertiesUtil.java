@@ -1,4 +1,4 @@
-package UIAutoTest.unils;
+package autotests.unils;
 
 import java.io.IOException;
 import java.io.InputStream;
