@@ -222,7 +222,7 @@
                   </tags>
                   <glue>
                     <!--Пакет с шагами тестов-->
-                    <package>Tests</package>
+                    <package>autotests</package>
                   </glue>
                   <outputDirectory>target/generated-test-sources/cucumber</outputDirectory>
                   <featuresDirectory>src/test/resources/</featuresDirectory>

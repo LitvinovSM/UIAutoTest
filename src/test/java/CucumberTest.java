@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         features = "src/test/resources/features", // путь к фичам
-        glue = "Tests", // пакет с шагами
+        glue = "autotests", // пакет с шагами
         tags = "@1", // тэги запуска
         //dryRun = true,// признак проверки имплементации шагом перед прохождением теста
         snippets = SnippetType.CAMELCASE // в каком формате предлагать нереализованные шаги

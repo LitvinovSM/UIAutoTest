@@ -1,4 +1,4 @@
-package Tests.UI.actions;
+package autotests.UI.commonWrappers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Capabilities;
@@ -9,7 +9,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
@@ -28,14 +27,13 @@ public class DriverActions {
 
 
     String driverType = "chrome";
-    String launchType = REMOTE_LAUNCH;
+    String launchType = LOCAL_LAUNCH;
 
-    public WebDriver getDriver() throws InterruptedException {
+    public WebDriver getDriver(){
         WebDriver driver;
         switch (launchType){
             case REMOTE_LAUNCH:
                 driver = getRemoteWebDriver(driverType);
-                Thread.sleep(5000);
             break;
             case LOCAL_LAUNCH:
                 driver= getWebDriverByType(driverType);
