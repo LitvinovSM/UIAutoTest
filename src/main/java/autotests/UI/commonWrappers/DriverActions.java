@@ -1,5 +1,6 @@
 package autotests.UI.commonWrappers;
 
+import autotests.unils.TestConfigFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -13,21 +14,14 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
+import static org.openqa.selenium.remote.BrowserType.*;
+
 public class DriverActions {
-
-    /**
-     * Any following expected driver type should be installed local before
-     */
-    private final String CHROME = "chrome";
-    private final String SAFARI = "safari";
-    private final String FIREFOX = "firefox";
-    private final String EDGE = "edge";
-    private final String REMOTE_LAUNCH = "remote";
+    private static TestConfigFactory config = TestConfigFactory.getInstance();
+     private final String REMOTE_LAUNCH = "remote";
     private final String LOCAL_LAUNCH = "local";
-
-
-    String driverType = "chrome";
-    String launchType = LOCAL_LAUNCH;
+    BrowserType driverType = config.getWebConfig().getBrowserType();
+    String launchType = config.getWebConfig().getLaunchType();
 
     public WebDriver getDriver(){
         WebDriver driver;
@@ -44,7 +38,7 @@ public class DriverActions {
         return driver;
     }
 
-    public WebDriver getWebDriverByType(String driverType) {
+    public WebDriver getWebDriverByType(BrowserType driverType) {
         WebDriver driver;
         switch (driverType) {
             case CHROME:
@@ -69,9 +63,9 @@ public class DriverActions {
         return driver;
     }
 
-    private RemoteWebDriver getRemoteWebDriver(String driverType) {
+    private RemoteWebDriver getRemoteWebDriver(BrowserType driverType) {
         RemoteWebDriver remoteWebDriver;
-        remoteWebDriver = new RemoteWebDriver(setCapabilities(driverType));
+        remoteWebDriver = new RemoteWebDriver(setCapabilities(driverType.BrowserType));
         return remoteWebDriver;
     }
 
@@ -95,4 +89,15 @@ public class DriverActions {
         }
         return capabilities;
     }
+    public enum BrowserType{
+        CHROME("chrome"),
+        FIREFOX("firefox"),
+        SAFARI("safari"),
+        EDGE("edge");
+        final String BrowserType;
+        BrowserType(String browserType){
+            this.BrowserType= browserType;
+        }
+    }
 }
+

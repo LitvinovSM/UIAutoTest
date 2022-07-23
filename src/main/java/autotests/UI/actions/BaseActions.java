@@ -1,11 +1,14 @@
 package autotests.UI.actions;
 
 import autotests.UI.commonWrappers.DriverActions;
+import autotests.unils.TestConfigFactory;
+import autotests.unils.WebConfig;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 
 public class BaseActions {
+
     public static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
     public static WebDriver DRIVER;
 

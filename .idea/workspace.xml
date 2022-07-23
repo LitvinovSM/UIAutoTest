@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="переделана инициализация, задел под базовую страницу / базовые экшены">
-      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/unils/TestConfigFactory.java" afterDir="false" />
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="что-то непонятное, подготовка к тест конфигу">
+      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/unils/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UIAutoTest/unils/PropertiesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/unils/PropertiesUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/unils/TestConfigFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/unils/TestConfigFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,6 +341,7 @@
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest\src\test\resources" />
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\UI" />
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\REST" />
     </key>
@@ -522,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658600552677</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="что-то непонятное, подготовка к тест конфигу">
+      <created>1658601705874</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1658601705874</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -663,7 +676,8 @@
     <MESSAGE value="рабочий докер" />
     <MESSAGE value="Пофикшен выход из сессии" />
     <MESSAGE value="переделана инициализация, задел под базовую страницу / базовые экшены" />
-    <option name="LAST_COMMIT_MESSAGE" value="переделана инициализация, задел под базовую страницу / базовые экшены" />
+    <MESSAGE value="что-то непонятное, подготовка к тест конфигу" />
+    <option name="LAST_COMMIT_MESSAGE" value="что-то непонятное, подготовка к тест конфигу" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
