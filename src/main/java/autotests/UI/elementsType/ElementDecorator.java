@@ -10,9 +10,10 @@ import java.lang.reflect.Field;
 
 public class ElementDecorator extends DefaultFieldDecorator {
 
-
-    public ElementDecorator(ElementLocatorFactory factory) {
+    private WebDriver webDriver;
+    public ElementDecorator(ElementLocatorFactory factory, WebDriver webDriver) {
         super(factory);
+        this.webDriver =webDriver;
     }
 
     @Override
@@ -32,7 +33,7 @@ public class ElementDecorator extends DefaultFieldDecorator {
     protected <T> T createElement(ClassLoader loader, ElementLocator locator, Class<T> clazz){
         WebElement proxy = proxyForLocator(loader,locator);
         try {
-            return clazz.getConstructor(WebElement.class, WebDriver.class).newInstance(proxy);
+            return clazz.getConstructor(WebElement.class, WebDriver.class).newInstance(proxy, webDriver);
         } catch (Exception e){
             throw new AssertionError("Web element can't be represented as a class : "+ clazz);
         }
