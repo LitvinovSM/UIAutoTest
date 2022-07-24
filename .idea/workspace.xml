@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="кастомные элементы">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" afterDir="false" />
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Заработали кастомные элементы">
       <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ElementDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ElementDecorator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -541,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658682579769</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Заработали кастомные элементы">
+      <created>1658684524824</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1658684524824</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -684,7 +685,8 @@
     <MESSAGE value="переделана инициализация, задел под базовую страницу / базовые экшены" />
     <MESSAGE value="что-то непонятное, подготовка к тест конфигу" />
     <MESSAGE value="кастомные элементы" />
-    <option name="LAST_COMMIT_MESSAGE" value="кастомные элементы" />
+    <MESSAGE value="Заработали кастомные элементы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Заработали кастомные элементы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

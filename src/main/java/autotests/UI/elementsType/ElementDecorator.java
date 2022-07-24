@@ -11,11 +11,17 @@ import java.lang.reflect.Field;
 public class ElementDecorator extends DefaultFieldDecorator {
 
     private WebDriver webDriver;
+    /**
+     * Дефолтный конструктор декоратора, который будет использоваться для пейдж фэктори
+     * @param factory - фабрика элемент локатора
+     * @param webDriver - инстанс драйвера*/
     public ElementDecorator(ElementLocatorFactory factory, WebDriver webDriver) {
         super(factory);
         this.webDriver =webDriver;
     }
 
+    /**
+     * Метод который будет помогать аннотации FindBy распознавать кастомные элементы, через проверку их класса*/
     @Override
     public Object decorate(ClassLoader loader, Field field){
         if (isCustomElement(field)){
@@ -24,12 +30,16 @@ public class ElementDecorator extends DefaultFieldDecorator {
         }
         return super.decorate(loader, field);
     }
-
+    /**
+     * Проверка что поле является наследником от класса CustomElement*/
     public boolean isCustomElement(Field field){
         return CustomElement.class.isAssignableFrom(field.getType());
     }
 
-
+    /**
+     * Метод создания кастомного веб элемента.
+     * Используется в декораторе
+     * @return новый инстанс кастомного элемента*/
     protected <T> T createElement(ClassLoader loader, ElementLocator locator, Class<T> clazz){
         WebElement proxy = proxyForLocator(loader,locator);
         try {
