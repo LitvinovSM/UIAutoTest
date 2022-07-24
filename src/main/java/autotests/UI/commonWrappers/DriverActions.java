@@ -13,16 +13,27 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.remote.BrowserType.*;
 
 public class DriverActions {
+    /**
+     * Конфиг*/
     private static TestConfigFactory config = TestConfigFactory.getInstance();
-     private final String REMOTE_LAUNCH = "remote";
+    private final String REMOTE_LAUNCH = "remote";
     private final String LOCAL_LAUNCH = "local";
-    BrowserType driverType = config.getWebConfig().getBrowserType();
-    String launchType = config.getWebConfig().getLaunchType();
+    private BrowserType driverType = config.getWebConfig().getBrowserType();
+    private String launchType = config.getWebConfig().getLaunchType();
+    private int implicitlyWaitValue = config.getWebConfig().getImplicitlyWaitValue();
+    private int explicitlyWaitValue = config.getWebConfig().getExplicitlyWaitValue();
+    private int pageLoadTimeout = config.getWebConfig().getPageLoadTimeout();
+    private WebDriverWait webDriverWait;
 
+    /**
+     * Получение вебдрайвера по заданным свойствам в WebTestsConfig.conf*/
     public WebDriver getDriver(){
         WebDriver driver;
         switch (launchType){
@@ -35,10 +46,15 @@ public class DriverActions {
             default:
                 driver=null;
         }
+        manageDriver(driver);
+        setExplicitlyWait(driver);
         return driver;
     }
 
-    public WebDriver getWebDriverByType(BrowserType driverType) {
+    /**
+     * Инициализация вебдрайвера
+     * @return экземпляр веб драйвераа*/
+    private WebDriver getWebDriverByType(BrowserType driverType) {
         WebDriver driver;
         switch (driverType) {
             case CHROME:
@@ -63,12 +79,18 @@ public class DriverActions {
         return driver;
     }
 
+    /**
+     * Инициализация удаленного вебдрайвера
+     * @return экземпляр веб драйвераа*/
     private RemoteWebDriver getRemoteWebDriver(BrowserType driverType) {
         RemoteWebDriver remoteWebDriver;
         remoteWebDriver = new RemoteWebDriver(setCapabilities(driverType.BrowserType));
         return remoteWebDriver;
     }
 
+    /**
+     * Получение свойств по типу браузера.
+     * @return свойства браузера*/
     private Capabilities setCapabilities(String driverType) {
         Capabilities capabilities;
         switch (driverType) {
@@ -89,6 +111,28 @@ public class DriverActions {
         }
         return capabilities;
     }
+
+    /**
+     * Установка таймаутов в одном месте*/
+    private void manageDriver(WebDriver driver){
+        driver.manage().timeouts().implicitlyWait(implicitlyWaitValue,TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(pageLoadTimeout,TimeUnit.SECONDS);
+    }
+    /**
+     * Установка явного ожидания для будущего использования ожиданий элементов*/
+    private void setExplicitlyWait(WebDriver driver){
+        this.webDriverWait = new WebDriverWait(driver,explicitlyWaitValue);
+    }
+
+    /**
+     * Получение "ожидателя", который инициализируется при создании драйвера*/
+    public WebDriverWait getWebDriverWait(){
+        return this.webDriverWait;
+    }
+
+    /**
+     * Енум с типами браузеров.
+     * значение конфика WebTestsConfig.conf должно матчится на текущее значение браузера*/
     public enum BrowserType{
         CHROME("chrome"),
         FIREFOX("firefox"),

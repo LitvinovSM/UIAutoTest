@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Заработали кастомные элементы">
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ElementDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ElementDecorator.java" afterDir="false" />
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="комментарии">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/unils/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/unils/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -542,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658684524824</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="комментарии">
+      <created>1658684916783</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1658684916783</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -655,6 +670,9 @@
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="8" side_tool="true" weight="0.32995737" />
     </layout-to-restore>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -686,7 +704,8 @@
     <MESSAGE value="что-то непонятное, подготовка к тест конфигу" />
     <MESSAGE value="кастомные элементы" />
     <MESSAGE value="Заработали кастомные элементы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Заработали кастомные элементы" />
+    <MESSAGE value="комментарии" />
+    <option name="LAST_COMMIT_MESSAGE" value="комментарии" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -743,7 +762,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java</url>
-          <line>33</line>
+          <line>44</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
