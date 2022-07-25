@@ -18,7 +18,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
         <aspectj.version>1.8.10</aspectj.version>
-        <allure-junit4.version>2.6.0</allure-junit4.version>
+        <allure-junit4.version>2.18.1</allure-junit4.version>
         <selenium.versions>3.14.0</selenium.versions>
         <cucumber.versions>4.2.5</cucumber.versions>
     </properties>
@@ -113,18 +113,23 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>1.18.24</version>
         </dependency>
     </dependencies>
     <!--Раздел для локального просмотра Allure отчетов-->
+    <!--    как установить сертификат, чтоб избежать ошибку про ssl:-->
+    <!--    1) скачайте сертификат гитхаба (кликать по замку возле http и выкачать сертификат в файл-->
+    <!--    2) выполнить команду аналогичную этой, со своим путем до java и сертификата: keytool -import  -noprompt   -trustcacerts   -alias github   -file C:/github.cert.cer   -keystore "C:\Program Files\Java\jdk-17.0.4\lib\security\cacert"  -storepass changeit-->
     <build>
         <plugins>
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.9</version>
+                <version>2.10.0</version>
                 <configuration>
-                    <reportVersion>2.6.0</reportVersion>
+                    <allureDownloadUrl>
+                        https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
+                    </allureDownloadUrl>
                 </configuration>
             </plugin>
         </plugins>
@@ -173,6 +178,16 @@
                                     <version>${aspectj.version}</version>
                                 </dependency>
                             </dependencies>
+                        </plugin>
+                        <plugin>
+                            <groupId>io.qameta.allure</groupId>
+                            <artifactId>allure-maven</artifactId>
+                            <version>2.10.0</version>
+                            <configuration>
+                                <allureDownloadUrl>
+                                    https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
+                                </allureDownloadUrl>
+                            </configuration>
                         </plugin>
                         <!--Конец Allure плагина-->
                     </plugins>
@@ -261,6 +276,16 @@
                                 <version>${aspectj.version}</version>
                             </dependency>
                         </dependencies>
+                    </plugin>
+                    <plugin>
+                        <groupId>io.qameta.allure</groupId>
+                        <artifactId>allure-maven</artifactId>
+                        <version>2.10.0</version>
+                        <configuration>
+                            <allureDownloadUrl>
+                                https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
+                            </allureDownloadUrl>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>

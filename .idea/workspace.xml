@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="комментарии">
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Фиксы в POM файле под allure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/unils/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/unils/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +108,11 @@
       </MavenImportingSettings>
     </option>
     <option name="enabledProfiles">
+      <list>
+        <option value="NonParallel" />
+      </list>
+    </option>
+    <option name="disabledProfiles">
       <list>
         <option value="parallel" />
       </list>
@@ -320,14 +319,14 @@
     </panes>
   </component>
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/MySpace/Coding/UIAutoTests/UIAutoTest&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;
@@ -342,6 +341,8 @@
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest\target" />
+      <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest" />
       <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest\src\test\resources" />
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\UI" />
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\REST" />
@@ -350,7 +351,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Cucumber Test">
+  <component name="RunManager" selected="Maven.UIAutoTest  Nonparallel">
     <configuration name="Cucumber Test" type="JUnit" factoryName="JUnit">
       <module name="UIAutoTest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -364,7 +365,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UIAutoTest " type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="UIAutoTest  Nonparallel" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="#USE_PROJECT_JDK" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="test" />
+                <option value="-Dtags=@all" />
+                <option value="-PNonParallel" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="UIAutoTest  parallel" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings">
@@ -409,7 +453,8 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Cucumber Test" />
-      <item itemvalue="Maven.UIAutoTest " />
+      <item itemvalue="Maven.UIAutoTest  parallel" />
+      <item itemvalue="Maven.UIAutoTest  Nonparallel" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -557,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658684916783</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="комментарии и ожидания">
+      <created>1658687970947</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1658687970947</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -705,7 +757,9 @@
     <MESSAGE value="кастомные элементы" />
     <MESSAGE value="Заработали кастомные элементы" />
     <MESSAGE value="комментарии" />
-    <option name="LAST_COMMIT_MESSAGE" value="комментарии" />
+    <MESSAGE value="комментарии и ожидания" />
+    <MESSAGE value="Фиксы в POM файле под allure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Фиксы в POM файле под allure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

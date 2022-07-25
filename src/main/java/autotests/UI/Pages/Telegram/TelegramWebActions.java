@@ -17,6 +17,7 @@ public class TelegramWebActions extends TelegramWebElements {
 
     @И("^открывает телеграмм веб$")
     public void any() throws InterruptedException {
+        System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
         DRIVER.get(BASE_URL);
         Thread.sleep(100);
         buttonElement.click();
