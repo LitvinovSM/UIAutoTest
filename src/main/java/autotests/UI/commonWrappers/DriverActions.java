@@ -30,7 +30,7 @@ public class DriverActions {
     private int implicitlyWaitValue = config.getWebConfig().getImplicitlyWaitValue();
     private int explicitlyWaitValue = config.getWebConfig().getExplicitlyWaitValue();
     private int pageLoadTimeout = config.getWebConfig().getPageLoadTimeout();
-    private WebDriverWait webDriverWait;
+    private static WebDriverWait webDriverWait;
 
     /**
      * Получение вебдрайвера по заданным свойствам в WebTestsConfig.conf*/
@@ -126,8 +126,8 @@ public class DriverActions {
 
     /**
      * Получение "ожидателя", который инициализируется при создании драйвера*/
-    public WebDriverWait getWebDriverWait(){
-        return this.webDriverWait;
+    public static WebDriverWait getWebDriverWait(){
+        return webDriverWait;
     }
 
     /**

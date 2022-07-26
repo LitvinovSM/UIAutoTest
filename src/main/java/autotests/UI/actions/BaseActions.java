@@ -8,6 +8,8 @@ import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static autotests.UI.commonWrappers.DriverActions.getWebDriverWait;
+
 /**
  * Базовые действия перед и после каждого теста*/
 public class BaseActions {
@@ -20,7 +22,7 @@ public class BaseActions {
     public static void bef(){
         threadLocalDriver.set(new DriverActions().getDriver());
         DRIVER = threadLocalDriver.get();
-        wait = new DriverActions().getWebDriverWait();
+        wait = getWebDriverWait();
     }
 
     @After

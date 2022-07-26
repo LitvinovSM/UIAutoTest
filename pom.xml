@@ -19,6 +19,7 @@
         <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
         <aspectj.version>1.8.10</aspectj.version>
         <allure-junit4.version>2.18.1</allure-junit4.version>
+        <allure.version>2.10.0</allure.version>
         <selenium.versions>3.14.0</selenium.versions>
         <cucumber.versions>4.2.5</cucumber.versions>
     </properties>
@@ -125,7 +126,7 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.10.0</version>
+                <version>${allure.version}</version>
                 <configuration>
                     <allureDownloadUrl>
                         https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
@@ -182,7 +183,7 @@
                         <plugin>
                             <groupId>io.qameta.allure</groupId>
                             <artifactId>allure-maven</artifactId>
-                            <version>2.10.0</version>
+                            <version>${allure.version}</version>
                             <configuration>
                                 <allureDownloadUrl>
                                     https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
@@ -280,7 +281,7 @@
                     <plugin>
                         <groupId>io.qameta.allure</groupId>
                         <artifactId>allure-maven</artifactId>
-                        <version>2.10.0</version>
+                        <version>${allure.version}</version>
                         <configuration>
                             <allureDownloadUrl>
                                 https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
