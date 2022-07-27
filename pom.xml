@@ -18,7 +18,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
         <aspectj.version>1.8.10</aspectj.version>
-        <allure-junit4.version>2.18.1</allure-junit4.version>
+        <allure-junit5.version>2.18.1</allure-junit5.version>
         <allure.version>2.10.0</allure.version>
         <selenium.versions>3.14.0</selenium.versions>
         <cucumber.versions>4.2.5</cucumber.versions>
@@ -80,15 +80,15 @@
         </dependency>
         <!--JUnit-->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.2</version>
         </dependency>
         <!--Allure отчеты-->
         <dependency>
             <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-junit4</artifactId>
-            <version>${allure-junit4.version}</version>
+            <artifactId>allure-junit5</artifactId>
+            <version>${allure-junit5.version}</version>
         </dependency>
         <!--Дополнительные зависимости для Allure-->
         <dependency>
@@ -162,7 +162,7 @@
                                 <properties>
                                     <property>
                                         <name>listener</name>
-                                        <value>io.qameta.allure.junit4.AllureJunit4</value>
+                                        <value>io.qameta.allure.junit5.AllureJunit5</value>
                                     </property>
                                 </properties>
                                 <systemProperties>
@@ -260,7 +260,7 @@
                             <properties>
                                 <property>
                                     <name>listener</name>
-                                    <value>io.qameta.allure.junit4.AllureJunit4</value>
+                                    <value>io.qameta.allure.junit5.AllureJunit5</value>
                                 </property>
                             </properties>
                             <systemProperties>

@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Фиксы в POM файле под allure">
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="сегодняшние достижения">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ElementDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/decoration/ElementDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -623,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658770814377</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="сегодняшние достижения">
+      <created>1658863497976</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1658863497976</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -773,7 +772,8 @@
     <MESSAGE value="комментарии" />
     <MESSAGE value="комментарии и ожидания" />
     <MESSAGE value="Фиксы в POM файле под allure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Фиксы в POM файле под allure" />
+    <MESSAGE value="сегодняшние достижения" />
+    <option name="LAST_COMMIT_MESSAGE" value="сегодняшние достижения" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
