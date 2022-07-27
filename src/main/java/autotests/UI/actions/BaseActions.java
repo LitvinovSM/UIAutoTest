@@ -5,6 +5,8 @@ import autotests.unils.TestConfigFactory;
 import autotests.unils.WebConfig;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

@@ -1,19 +1,19 @@
 package autotests.UI.Pages.Telegram;
 
 import autotests.UI.elementsType.ButtonElement;
-import autotests.UI.elementsType.CustomElement;
 import autotests.unils.TestConfigFactory;
 import cucumber.api.java.ru.И;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 public class TelegramWebActions extends TelegramWebElements {
 
     public TelegramWebActions(){
         super();
     }
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]")
+    @FindBy(xpath = "//*[@id='app']")
     static ButtonElement buttonElement;
 
 
@@ -22,10 +22,10 @@ public class TelegramWebActions extends TelegramWebElements {
     @И("открывает телеграмм веб")
     public void any() throws InterruptedException {
         DRIVER.get(BASE_URL);
-        Thread.sleep(10000);
-        ButtonElement but2 = buttonElement.crateElement(ButtonElement.class,DRIVER,By.xpath(".//*[contains(text(),'овстей')]"));
-        but2.click();
-        Thread.sleep(10000);
+        Thread.sleep(1000);
+        List<ButtonElement> but2 = buttonElement.findElements(By.xpath(".//*[contains(text(),'овости')]"));
+        but2.get(0).click();
+        Thread.sleep(1000);
     }
 
 

@@ -5,7 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static autotests.UI.commonWrappers.DriverActions.getWebDriverWait;
 
@@ -38,11 +39,31 @@ public class CustomElement{
         return webElement;
     }
 
-    public <T extends CustomElement> T crateElement(Class<T> clazz, WebDriver webDriver, By by) {
+    public <T extends CustomElement> T findElement(By by) {
         T targetClazz;
+        WebElement webElement = this.webElement;
+        WebDriver webDriver = this.webDriver;
         try {
-            targetClazz = clazz.getDeclaredConstructor(WebDriver.class,WebElement.class).newInstance(webDriver,webDriver.findElement(by));
+            targetClazz = (T) this.getClass().getDeclaredConstructor(WebDriver.class,WebElement.class).newInstance(webDriver,webElement.findElement(by));
             return targetClazz;
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    public <T extends CustomElement> List<T> findElements(By by) {
+        T targetClazz;
+        List<T> targetList = new ArrayList<>();
+        WebElement element = this.webElement;
+        WebDriver webDriver = this.webDriver;
+        try {
+            List<WebElement> list= webDriver.findElements(by);
+            for (WebElement elem : list){
+                targetClazz = (T) this.getClass().getDeclaredConstructor(WebDriver.class,WebElement.class).newInstance(webDriver,elem);
+                targetList.add(targetClazz);
+            }
+            return targetList;
         } catch (Exception e){
             System.out.println(e.getMessage());
             return null;
