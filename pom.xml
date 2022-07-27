@@ -159,13 +159,11 @@
                                 <argLine>
                                     -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                                 </argLine>
-                                <properties>
-                                    <property>
-                                        <name>listener</name>
-                                        <value>io.qameta.allure.junit5.AllureJunit5</value>
-                                    </property>
-                                </properties>
                                 <systemProperties>
+                                    <property>
+                                        <name>junit.jupiter.extensions.autodetection.enabled</name>
+                                        <value>true</value>
+                                    </property>
                                     <property>
                                         <name>allure.results.directory</name>
                                         <value>${project.build.directory}/allure-results</value>
@@ -257,13 +255,11 @@
                                 -Dcucumber.options="--plugin pretty"
                             </argLine>
                             <!--Аллур отчет для параллельных тестов-->
-                            <properties>
-                                <property>
-                                    <name>listener</name>
-                                    <value>io.qameta.allure.junit5.AllureJunit5</value>
-                                </property>
-                            </properties>
                             <systemProperties>
+                                <property>
+                                    <name>junit.jupiter.extensions.autodetection.enabled</name>
+                                    <value>true</value>
+                                </property>
                                 <property>
                                     <name>allure.results.directory</name>
                                     <value>${project.build.directory}/allure-results</value>
