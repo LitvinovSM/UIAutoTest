@@ -21,27 +21,28 @@ import static org.openqa.selenium.remote.BrowserType.*;
 
 public class DriverActions {
     /**
-     * Конфиг*/
-    private static TestConfigFactory config = TestConfigFactory.getInstance();
-    private final String REMOTE_LAUNCH = "remote";
-    private final String LOCAL_LAUNCH = "local";
-    private BrowserType driverType = config.getWebConfig().getBrowserType();
-    private String launchType = config.getWebConfig().getLaunchType();
-    private int implicitlyWaitValue = config.getWebConfig().getImplicitlyWaitValue();
-    private int explicitlyWaitValue = config.getWebConfig().getExplicitlyWaitValue();
-    private int pageLoadTimeout = config.getWebConfig().getPageLoadTimeout();
+     * Конфиги которые берутся из WebTestConfig.conf*/
+    private static final TestConfigFactory config = TestConfigFactory.getInstance();
+    private final static String REMOTE = "remote";
+    private final static String LOCAL = "local";
+    private final BrowserType DRIVER_TYPE = config.getWebConfig().getBrowserType();
+    private final String LAUNCH_TYPE = config.getWebConfig().getLaunchType();
+    private final int IMPLICITLY_WAIT_VALUE = config.getWebConfig().getImplicitlyWaitValue();
+    private final int EXPLICITLY_WAIT_VALUE = config.getWebConfig().getExplicitlyWaitValue();
+    private final int PAGE_LOAD_TIMEOUT = config.getWebConfig().getPageLoadTimeout();
     private static WebDriverWait webDriverWait;
 
     /**
      * Получение вебдрайвера по заданным свойствам в WebTestsConfig.conf*/
     public WebDriver getDriver(){
+
         WebDriver driver;
-        switch (launchType){
-            case REMOTE_LAUNCH:
-                driver = getRemoteWebDriver(driverType);
+        switch (LAUNCH_TYPE){
+            case REMOTE:
+                driver = getRemoteWebDriver(DRIVER_TYPE);
             break;
-            case LOCAL_LAUNCH:
-                driver= getWebDriverByType(driverType);
+            case LOCAL:
+                driver= getWebDriverByType(DRIVER_TYPE);
                 break;
             default:
                 driver=null;
@@ -115,13 +116,13 @@ public class DriverActions {
     /**
      * Установка таймаутов в одном месте*/
     private void manageDriver(WebDriver driver){
-        driver.manage().timeouts().implicitlyWait(implicitlyWaitValue,TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(pageLoadTimeout,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(IMPLICITLY_WAIT_VALUE,TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(PAGE_LOAD_TIMEOUT,TimeUnit.SECONDS);
     }
     /**
      * Установка явного ожидания для будущего использования ожиданий элементов*/
     private void setExplicitlyWait(WebDriver driver){
-        this.webDriverWait = new WebDriverWait(driver,explicitlyWaitValue);
+        this.webDriverWait = new WebDriverWait(driver, EXPLICITLY_WAIT_VALUE);
     }
 
     /**

@@ -39,6 +39,13 @@ public class CustomElement{
         return webElement;
     }
 
+
+    /**
+     * Реализация привычного метода findElement для кастомных элементов
+     *@param by - локатор дочернего элемента
+     *@return элемент типа <T>, то есть дочерний элемент CustomElement*/
+
+    @SuppressWarnings("unchecked")
     public <T extends CustomElement> T findElement(By by) {
         T targetClazz;
         WebElement webElement = this.webElement;
@@ -52,15 +59,63 @@ public class CustomElement{
         }
     }
 
+    /**
+     * Реализация привычного метода findElement для кастомных элементов для возможности поиска в элементе иных типов элементов
+     * т.е. в TableElement может лежать RowElement и чтобы его найти надо вызвать
+     * findElement(<локатор>,RowElement.class)
+     *@param by - локатор дочернего элемента
+     *@param clazz - тип ожидаемого класса
+     *@return элемент типа <T>, то есть дочерний элемент CustomElement*/
+    public <T extends CustomElement> T findElement(By by,Class<T> clazz) {
+        T targetClazz;
+        WebElement webElement = this.webElement;
+        WebDriver webDriver = this.webDriver;
+        try {
+            targetClazz = clazz.getDeclaredConstructor(WebDriver.class,WebElement.class).newInstance(webDriver,webElement.findElement(by));
+            return targetClazz;
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * Реализация привычного метода findElements для кастомных элементов
+     *@param by - локатор дочернего элемента
+     *@return список типа List<T>, то есть список дочерних элементов CustomElement*/
+    @SuppressWarnings("unchecked")
     public <T extends CustomElement> List<T> findElements(By by) {
         T targetClazz;
         List<T> targetList = new ArrayList<>();
-        WebElement element = this.webElement;
         WebDriver webDriver = this.webDriver;
         try {
             List<WebElement> list= webDriver.findElements(by);
             for (WebElement elem : list){
                 targetClazz = (T) this.getClass().getDeclaredConstructor(WebDriver.class,WebElement.class).newInstance(webDriver,elem);
+                targetList.add(targetClazz);
+            }
+            return targetList;
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * Реализация привычного метода findElements для кастомных элементов для возможности поиска в элементе иных типов элементов
+     * т.е. в TableElement может лежать список RowElement и чтобы его найти надо вызвать
+     * findElements(<локатор>,RowElement.class)
+     *@param by - локатор дочерних элементов
+     *@param clazz - тип ожидаемых элементов
+     *@return список типа List<T>, то есть список дочерних элементов с ожидаемым типом*/
+    public <T extends CustomElement> List<T> findElements(By by,Class<T> clazz) {
+        T targetClazz;
+        List<T> targetList = new ArrayList<>();
+        WebDriver webDriver = this.webDriver;
+        try {
+            List<WebElement> list= webDriver.findElements(by);
+            for (WebElement elem : list){
+                targetClazz = clazz.getDeclaredConstructor(WebDriver.class,WebElement.class).newInstance(webDriver,elem);
                 targetList.add(targetClazz);
             }
             return targetList;

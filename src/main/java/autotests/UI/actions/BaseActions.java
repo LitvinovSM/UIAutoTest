@@ -16,6 +16,11 @@ public class BaseActions {
     public static WebDriver webDriver;
     public static WebDriverWait wait;
 
+    /**
+     * Шаги до:
+     * 1)инициализация драйвера в ThreadLocal
+     * 2) Присваивание webDriver
+     * 3) инициализация wait */
     @Before
     public static void bef(){
         threadLocalDriver.set(new DriverActions().getDriver());
@@ -23,6 +28,9 @@ public class BaseActions {
         wait = getWebDriverWait();
     }
 
+    /**
+     * Шаги после:
+     * 1) Закрытие инстанса webDriver */
     @After
     public static void after(){
         threadLocalDriver.get().quit();
