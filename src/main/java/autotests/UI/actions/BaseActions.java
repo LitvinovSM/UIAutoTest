@@ -22,7 +22,7 @@ public class BaseActions {
      * 2) Присваивание webDriver
      * 3) инициализация wait */
     @Before
-    public static void bef(){
+    public static void bef() throws Exception {
         threadLocalDriver.set(new DriverActions().getDriver());
         webDriver = threadLocalDriver.get();
         wait = getWebDriverWait();

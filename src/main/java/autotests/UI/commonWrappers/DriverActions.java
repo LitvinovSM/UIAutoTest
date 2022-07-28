@@ -34,19 +34,13 @@ public class DriverActions {
 
     /**
      * Получение вебдрайвера по заданным свойствам в WebTestsConfig.conf*/
-    public WebDriver getDriver(){
+    public WebDriver getDriver() throws Exception {
 
-        WebDriver driver;
-        switch (LAUNCH_TYPE){
-            case REMOTE:
-                driver = getRemoteWebDriver(DRIVER_TYPE);
-            break;
-            case LOCAL:
-                driver= getWebDriverByType(DRIVER_TYPE);
-                break;
-            default:
-                driver=null;
-        }
+        WebDriver driver = switch (LAUNCH_TYPE) {
+            case REMOTE -> getRemoteWebDriver(DRIVER_TYPE);
+            case LOCAL -> getWebDriverByType(DRIVER_TYPE);
+            default -> throw new Exception("Запуск драйвера не смогу завершиться успешно т.к. LAUNCH_TYPE не соответствует ни одному из ожидаемых значений. LAUNCH_TYPE ="+LAUNCH_TYPE);
+        };
         manageDriver(driver);
         setExplicitlyWait(driver);
         return driver;
@@ -58,24 +52,23 @@ public class DriverActions {
     private WebDriver getWebDriverByType(BrowserType driverType) {
         WebDriver driver;
         switch (driverType) {
-            case CHROME:
+            case CHROME -> {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
-                break;
-            case SAFARI:
+            }
+            case SAFARI -> {
                 WebDriverManager.safaridriver().setup();
                 driver = new SafariDriver();
-                break;
-            case FIREFOX:
+            }
+            case FIREFOX -> {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
-                break;
-            case EDGE:
+            }
+            case EDGE -> {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
-                break;
-            default:
-                driver = null;
+            }
+            default -> driver = null;
         }
         return driver;
     }
@@ -92,25 +85,15 @@ public class DriverActions {
     /**
      * Получение свойств по типу браузера.
      * @return свойства браузера*/
+    //TODO: разобраться с опциями драйвера
     private Capabilities setCapabilities(String driverType) {
-        Capabilities capabilities;
-        switch (driverType) {
-            case CHROME:
-                capabilities = new ChromeOptions();
-                break;
-            case SAFARI:
-                capabilities = new SafariOptions();
-                break;
-            case FIREFOX:
-                capabilities = new FirefoxOptions();
-                break;
-            case EDGE:
-                capabilities = new EdgeOptions();
-                break;
-            default:
-                capabilities=null;
-        }
-        return capabilities;
+        return switch (driverType) {
+            case CHROME -> new ChromeOptions();
+            case SAFARI -> new SafariOptions();
+            case FIREFOX -> new FirefoxOptions();
+            case EDGE -> new EdgeOptions();
+            default -> null;
+        };
     }
 
     /**
@@ -122,7 +105,7 @@ public class DriverActions {
     /**
      * Установка явного ожидания для будущего использования ожиданий элементов*/
     private void setExplicitlyWait(WebDriver driver){
-        this.webDriverWait = new WebDriverWait(driver, EXPLICITLY_WAIT_VALUE);
+        webDriverWait = new WebDriverWait(driver, EXPLICITLY_WAIT_VALUE);
     }
 
     /**
