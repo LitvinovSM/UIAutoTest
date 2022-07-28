@@ -21,7 +21,7 @@ public class TelegramWebActions extends TelegramWebElements {
 
     @И("открывает телеграмм веб")
     public void any() throws InterruptedException {
-        DRIVER.get(BASE_URL);
+        webDriver.get(BASE_URL);
         Thread.sleep(1000);
         List<ButtonElement> but2 = buttonElement.findElements(By.xpath(".//*[contains(text(),'овости')]"));
         but2.get(0).click();

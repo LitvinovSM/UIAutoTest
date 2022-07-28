@@ -18,12 +18,12 @@ public class BasePage {
      * реализует кастомный декторатор ElementDecorator
      * инициализирует PageFactory с кастомным декоратором*/
     public BasePage(){
-        ElementLocatorFactory factory = new DefaultElementLocatorFactory(DRIVER);
-        ElementDecorator decorator = new ElementDecorator(factory,DRIVER);
+        ElementLocatorFactory factory = new DefaultElementLocatorFactory(webDriver);
+        ElementDecorator decorator = new ElementDecorator(factory, webDriver);
         PageFactory.initElements(decorator, this);
     }
-    public static WebDriver DRIVER = BaseActions.DRIVER;
-    public static WebDriverWait wait = BaseActions.wait;
+    public WebDriver webDriver = BaseActions.webDriver;
+    public WebDriverWait wait = BaseActions.wait;
 
 
 }
