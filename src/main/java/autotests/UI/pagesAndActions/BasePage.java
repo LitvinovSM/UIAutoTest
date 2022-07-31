@@ -2,6 +2,8 @@ package autotests.UI.pagesAndActions;
 
 import autotests.UI.customElements.decoration.ElementDecorator;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
@@ -31,5 +33,11 @@ public class BasePage {
     public WebDriverWait getWait() {
         return wait;
     }
+
+    @FindBy(xpath = "//*[@action='https://nova.rambler.ru/search']")
+    public WebElement inputBlock;
+
+    @FindBy(xpath = "//div[contains(@class,'rui')]")
+    public WebElement toolbarBlock;
 
 }

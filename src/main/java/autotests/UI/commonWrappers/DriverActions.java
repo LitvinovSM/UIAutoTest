@@ -25,7 +25,7 @@ public class DriverActions {
     private static final TestConfigFactory config = TestConfigFactory.getInstance();
     private final static String REMOTE = "remote";
     private final static String LOCAL = "local";
-    private final BrowserType DRIVER_TYPE = config.getWebConfig().getBrowserType();
+    private final BrowserType BROWSER_TYPE = config.getWebConfig().getBrowserType();
     private final String LAUNCH_TYPE = config.getWebConfig().getLaunchType();
     private final int IMPLICITLY_WAIT_VALUE = config.getWebConfig().getImplicitlyWaitValue();
     private final int EXPLICITLY_WAIT_VALUE = config.getWebConfig().getExplicitlyWaitValue();
@@ -37,8 +37,8 @@ public class DriverActions {
     public WebDriver getDriver() throws Exception {
 
         WebDriver driver = switch (LAUNCH_TYPE) {
-            case REMOTE -> getRemoteWebDriver(DRIVER_TYPE);
-            case LOCAL -> getWebDriverByType(DRIVER_TYPE);
+            case REMOTE -> getRemoteWebDriver(BROWSER_TYPE);
+            case LOCAL -> getWebDriverByType(BROWSER_TYPE);
             default -> throw new Exception("Запуск драйвера не смогу завершиться успешно т.к. LAUNCH_TYPE не соответствует ни одному из ожидаемых значений. LAUNCH_TYPE ="+LAUNCH_TYPE);
         };
         manageDriver(driver);

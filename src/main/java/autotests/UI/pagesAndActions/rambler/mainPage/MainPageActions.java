@@ -30,4 +30,6 @@ public class MainPageActions extends MainPageElements {
             assertTrue(buttonElement.returnAsWebElement().isDisplayed());
         }
     }
+
+
 }
