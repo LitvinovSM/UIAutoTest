@@ -1,4 +1,4 @@
-package autotests.UI.actions;
+package autotests.UI.pagesAndActions;
 
 import autotests.UI.commonWrappers.DriverActions;
 import cucumber.api.java.After;
@@ -10,7 +10,7 @@ import static autotests.UI.commonWrappers.DriverActions.getWebDriverWait;
 
 /**
  * Базовые действия перед и после каждого теста*/
-public class BaseActions {
+public class BeforeAndAfterActions {
 
     public static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
     public static WebDriver webDriver;

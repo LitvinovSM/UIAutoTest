@@ -1,4 +1,4 @@
-package autotests.UI.elementsType;
+package autotests.UI.customElements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -36,7 +36,7 @@ public class CustomElement{
      * Возвращает кастомный элемент как веб элемент
      * @return кастомный элемент как тип WebElement*/
     public WebElement returnAsWebElement(){
-        return webElement;
+        return this.webElement;
     }
 
 

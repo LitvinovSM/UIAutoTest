@@ -4,10 +4,24 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="фикс проблемы последовательного запуска">
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="резолв всех ворнингов">
+      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pagesAndActions/BaseaActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pagesAndActions/common/CommonActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pagesAndActions/common/CommonElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pagesAndActions/rambler/mainPage/MainPageElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/UI/Основная страница/ТелеграмВеб.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pagesAndActions/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pagesAndActions/rambler/mainPage/MainPageActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebElements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pagesAndActions/BeforeAndAfterActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/customElements/ButtonElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/customElements/CustomElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/decoration/ElementDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/customElements/decoration/ElementDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб1.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб2.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,6 +338,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/MySpace/Coding/UIAutoTests/UIAutoTest&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -341,11 +356,11 @@
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest\src\test\resources\features\UI\Основная страница" />
       <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest\target" />
       <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest" />
       <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest\src\test\resources" />
       <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\UI" />
-      <recent name="C:\My Space\AutoTest\UIAutoTest\src\test\resources\features\REST" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -658,7 +673,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659039012436</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="резолв всех ворнингов">
+      <created>1659039531597</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1659039531597</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -812,7 +834,8 @@
     <MESSAGE value="update to junit 5" />
     <MESSAGE value="Custom finds" />
     <MESSAGE value="фикс проблемы последовательного запуска" />
-    <option name="LAST_COMMIT_MESSAGE" value="фикс проблемы последовательного запуска" />
+    <MESSAGE value="резолв всех ворнингов" />
+    <option name="LAST_COMMIT_MESSAGE" value="резолв всех ворнингов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -868,9 +891,14 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/autotests/UI/pagesAndActions/rambler/mainPage/MainPageActions.java</url>
           <line>26</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/autotests/UI/customElements/ButtonElement.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/UIAutoTest/DefaultSteps/AfterSteps.java</url>

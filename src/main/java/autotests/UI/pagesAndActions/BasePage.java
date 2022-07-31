@@ -1,7 +1,6 @@
-package autotests.UI.Pages;
+package autotests.UI.pagesAndActions;
 
-import autotests.UI.actions.BaseActions;
-import autotests.UI.elementsType.decoration.ElementDecorator;
+import autotests.UI.customElements.decoration.ElementDecorator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
@@ -22,8 +21,15 @@ public class BasePage {
         ElementDecorator decorator = new ElementDecorator(factory, webDriver);
         PageFactory.initElements(decorator, this);
     }
-    public WebDriver webDriver = BaseActions.webDriver;
-    public WebDriverWait wait = BaseActions.wait;
+    private WebDriver webDriver = BeforeAndAfterActions.webDriver;
+    public WebDriverWait wait = BeforeAndAfterActions.wait;
 
+    public WebDriver getWebDriver() {
+        return webDriver;
+    }
+
+    public WebDriverWait getWait() {
+        return wait;
+    }
 
 }

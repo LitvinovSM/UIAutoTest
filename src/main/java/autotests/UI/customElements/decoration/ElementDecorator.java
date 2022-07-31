@@ -1,6 +1,6 @@
-package autotests.UI.elementsType.decoration;
+package autotests.UI.customElements.decoration;
 
-import autotests.UI.elementsType.CustomElement;
+import autotests.UI.customElements.CustomElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.pagefactory.DefaultFieldDecorator;
