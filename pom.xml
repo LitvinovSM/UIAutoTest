@@ -21,7 +21,7 @@
         <allure-junit5.version>2.18.1</allure-junit5.version>
         <allure.version>2.10.0</allure.version>
         <selenium.versions>3.14.0</selenium.versions>
-        <cucumber.versions>4.2.5</cucumber.versions>
+        <cucumber.versions>7.8.0</cucumber.versions>
     </properties>
 
     <dependencies>

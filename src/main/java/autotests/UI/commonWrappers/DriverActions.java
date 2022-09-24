@@ -10,6 +10,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
@@ -54,7 +55,7 @@ public class DriverActions {
         switch (driverType) {
             case CHROME -> {
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(setCapabilities(driverType));
             }
             case SAFARI -> {
                 WebDriverManager.safaridriver().setup();
@@ -78,7 +79,7 @@ public class DriverActions {
      * @return экземпляр веб драйвераа*/
     private RemoteWebDriver getRemoteWebDriver(BrowserType driverType) {
         RemoteWebDriver remoteWebDriver;
-        remoteWebDriver = new RemoteWebDriver(setCapabilities(driverType.BrowserType));
+        remoteWebDriver = new RemoteWebDriver(setCapabilities(driverType));
         return remoteWebDriver;
     }
 
@@ -86,14 +87,26 @@ public class DriverActions {
      * Получение свойств по типу браузера.
      * @return свойства браузера*/
     //TODO: разобраться с опциями драйвера
-    private Capabilities setCapabilities(String driverType) {
-        return switch (driverType) {
-            case CHROME -> new ChromeOptions();
-            case SAFARI -> new SafariOptions();
-            case FIREFOX -> new FirefoxOptions();
-            case EDGE -> new EdgeOptions();
-            default -> null;
-        };
+    private Capabilities setCapabilities(BrowserType driverType) {
+        switch (driverType) {
+            case CHROME:
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("start-maximized"); // https://stackoverflow.com/a/26283818/1689770
+                options.addArguments("enable-automation"); // https://stackoverflow.com/a/43840128/1689770
+                options.addArguments("--no-sandbox"); //https://stackoverflow.com/a/50725918/1689770
+                options.addArguments("--disable-dev-shm-usage"); //https://stackoverflow.com/a/50725918/1689770
+                options.addArguments("--disable-browser-side-navigation"); //https://stackoverflow.com/a/49123152/1689770
+                options.addArguments("--disable-gpu"); //https://stackoverflow.com/questions/51959986/how-to-solve-selenium-chromedriver-timed-out-receiving-message-from-renderer-exc
+                return options;
+            case SAFARI:
+                return null;
+            case FIREFOX:
+                return null;
+            case EDGE:
+                return null;
+            default:
+                return null;
+        }
     }
 
     /**

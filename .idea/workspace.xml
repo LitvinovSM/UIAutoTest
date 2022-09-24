@@ -5,9 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="фикс проблемы последовательного запуска">
+      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainElements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebElements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BeforeAndAfterSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/decoration/ElementDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/unils/PropertiesUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/unils/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/unils/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб1.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб2.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -867,11 +884,6 @@
           <line>35</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/UIAutoTest/DefaultSteps/AfterSteps.java</url>
           <line>14</line>
@@ -883,7 +895,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/io/rest-assured/rest-assured/4.3.3/rest-assured-4.3.3.jar!/io/restassured/internal/RequestSpecificationImpl.class</url>
           <line>315</line>
-          <properties class="io.restassured.internal.RequestSpecificationImpl" method="specification">
+          <properties class="io.restassured.internal.RequestSpecificationImpl">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="6" />

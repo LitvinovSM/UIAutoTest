@@ -1,8 +1,8 @@
-package autotests.UI.actions;
+package autotests.UI;
 
 import autotests.UI.commonWrappers.DriverActions;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.AfterAll;
+import io.cucumber.java.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -10,7 +10,7 @@ import static autotests.UI.commonWrappers.DriverActions.getWebDriverWait;
 
 /**
  * Базовые действия перед и после каждого теста*/
-public class BaseActions {
+public class BeforeAndAfterSteps {
 
     public static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
     public static WebDriver webDriver;
@@ -21,7 +21,8 @@ public class BaseActions {
      * 1)инициализация драйвера в ThreadLocal
      * 2) Присваивание webDriver
      * 3) инициализация wait */
-    @Before
+
+    @BeforeAll
     public static void bef() throws Exception {
         threadLocalDriver.set(new DriverActions().getDriver());
         webDriver = threadLocalDriver.get();
@@ -31,7 +32,7 @@ public class BaseActions {
     /**
      * Шаги после:
      * 1) Закрытие инстанса webDriver */
-    @After
+    @AfterAll
     public static void after(){
         threadLocalDriver.get().quit();
     }
