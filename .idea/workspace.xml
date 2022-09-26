@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="УБрал бесполезные кастомные элементы">
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Добавил методы для работы с ссылками">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -356,7 +353,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: Проверка главной страницы рамблер">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Проверка ссылок на главной странице рамблер">
     <configuration name="Feature: Проверка главной страницы рамблер" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" />
@@ -380,11 +377,12 @@
     <configuration name="Scenario: Проверка ссылок на главной странице рамблер" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" />
-      <option name="GLUE" value="autotests.UI.pages.main" />
+      <option name="GLUE" value="autotests.UI" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="UIAutoTest" />
       <option name="NAME_FILTER" value="^Проверка ссылок на главной странице рамблер$" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Проверка ссылок на главной странице рамблер$&quot;" />
+      <shortenClasspath name="NONE" />
       <option name="SUGGESTED_NAME" value="Scenario: Проверка ссылок на главной странице рамблер" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
@@ -393,6 +391,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <option name="GLUE" value="autotest.UI" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="UIAutoTest" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -505,8 +514,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: Проверка главной страницы рамблер" />
         <item itemvalue="Cucumber Java.Scenario: Проверка ссылок на главной странице рамблер" />
+        <item itemvalue="Cucumber Java.Feature: Проверка главной страницы рамблер" />
       </list>
     </recent_temporary>
   </component>
@@ -718,7 +727,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664031611770</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Добавил методы для работы с ссылками">
+      <created>1664196456725</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1664196456725</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -873,7 +889,8 @@
     <MESSAGE value="Custom finds" />
     <MESSAGE value="фикс проблемы последовательного запуска" />
     <MESSAGE value="УБрал бесполезные кастомные элементы" />
-    <option name="LAST_COMMIT_MESSAGE" value="УБрал бесполезные кастомные элементы" />
+    <MESSAGE value="Добавил методы для работы с ссылками" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил методы для работы с ссылками" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -928,6 +945,16 @@
           <line>35</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/UIAutoTest/DefaultSteps/AfterSteps.java</url>
           <line>14</line>
@@ -939,7 +966,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/io/rest-assured/rest-assured/4.3.3/rest-assured-4.3.3.jar!/io/restassured/internal/RequestSpecificationImpl.class</url>
           <line>315</line>
-          <properties class="io.restassured.internal.RequestSpecificationImpl">
+          <properties class="io.restassured.internal.RequestSpecificationImpl" method="specification">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="6" />

@@ -34,6 +34,13 @@ public class MainActions extends MainElements {
         initWebElementMap();
         WebElement targetElement = webElementMap.get(elementKey);
         WebElement link = getLinkByTextInElement(targetElement,linkText);
-        assertTrue(isRealDisplayed(link),String.format("Ссылка с текстом %s не найдена в элементе %s",linkText,elementKey));
+    }
+
+    @И("'главная страница' проверяет наличие кнопки с текстом {string} в элементе {string}")
+    public void checkButtonsByTextInElement(String buttonText, String elementKey) {
+        elementKey = elementKey.toUpperCase();
+        initWebElementMap();
+        WebElement targetElement = webElementMap.get(elementKey);
+        WebElement button = getButtonByTextInElement(targetElement,buttonText);
     }
 }
