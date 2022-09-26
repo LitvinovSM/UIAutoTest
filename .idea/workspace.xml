@@ -4,27 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="фикс проблемы последовательного запуска">
-      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainElements.java" afterDir="false" />
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="УБрал бесполезные кастомные элементы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebActions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/Pages/Telegram/TelegramWebElements.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/actions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BeforeAndAfterSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/ButtonElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/CustomElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/elementsType/decoration/ElementDecorator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/unils/PropertiesUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/unils/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/unils/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainElements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/WebTestsConfig.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб1.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/ТелеграмВеб2.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -368,7 +356,47 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Cucumber Test">
+  <component name="RunManager" selected="Cucumber Java.Feature: Проверка главной страницы рамблер">
+    <configuration name="Feature: Проверка главной страницы рамблер" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" />
+      <option name="GLUE" value="autotests.UI" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="UIAutoTest" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Feature: Проверка главной страницы рамблер" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Проверка ссылок на главной странице рамблер" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" />
+      <option name="GLUE" value="autotests.UI.pages.main" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="UIAutoTest" />
+      <option name="NAME_FILTER" value="^Проверка ссылок на главной странице рамблер$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Проверка ссылок на главной странице рамблер$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Проверка ссылок на главной странице рамблер" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Cucumber Test" type="JUnit" factoryName="JUnit">
       <module name="UIAutoTest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -469,10 +497,18 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Feature: Проверка главной страницы рамблер" />
+      <item itemvalue="Cucumber Java.Scenario: Проверка ссылок на главной странице рамблер" />
       <item itemvalue="JUnit.Cucumber Test" />
       <item itemvalue="Maven.UIAutoTest  parallel" />
       <item itemvalue="Maven.UIAutoTest  Nonparallel" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Feature: Проверка главной страницы рамблер" />
+        <item itemvalue="Cucumber Java.Scenario: Проверка ссылок на главной странице рамблер" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -675,7 +711,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659039012436</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="УБрал бесполезные кастомные элементы">
+      <created>1664031611770</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1664031611770</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -829,7 +872,8 @@
     <MESSAGE value="update to junit 5" />
     <MESSAGE value="Custom finds" />
     <MESSAGE value="фикс проблемы последовательного запуска" />
-    <option name="LAST_COMMIT_MESSAGE" value="фикс проблемы последовательного запуска" />
+    <MESSAGE value="УБрал бесполезные кастомные элементы" />
+    <option name="LAST_COMMIT_MESSAGE" value="УБрал бесполезные кастомные элементы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
