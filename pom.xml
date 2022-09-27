@@ -136,6 +136,8 @@
                     <allureDownloadUrl>
                         https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
                     </allureDownloadUrl>
+                    <resultsDirectory>${project.build.directory}/surefire-reports</resultsDirectory>
+                    <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>
                 </configuration>
             </plugin>
         </plugins>
@@ -184,6 +186,8 @@
                                 <allureDownloadUrl>
                                     https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
                                 </allureDownloadUrl>
+                                <resultsDirectory>${project.build.directory}/surefire-reports</resultsDirectory>
+                                <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>
                             </configuration>
                         </plugin>
                         <!--Конец Allure плагина-->
@@ -260,7 +264,7 @@
                                 </property>
                                 <property>
                                     <name>allure.results.directory</name>
-                                    <value>${project.build.directory}/allure-results</value>
+                                    <value>${project.build.directory}/target/allure-results</value>
                                 </property>
                             </systemProperties>
                         </configuration>
@@ -273,6 +277,8 @@
                             <allureDownloadUrl>
                                 https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
                             </allureDownloadUrl>
+                            <resultsDirectory>${project.build.directory}/surefire-reports</resultsDirectory>
+                            <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>
                         </configuration>
                     </plugin>
                 </plugins>

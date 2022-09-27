@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Добавил методы для работы с кнопками">
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="изменил пом для аллур">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,9 +104,9 @@
         <option name="jdkForImporter" value="17" />
       </MavenImportingSettings>
     </option>
-    <option name="enabledProfiles">
+    <option name="disabledProfiles">
       <list>
-        <option value="NonParallel" />
+        <option value="parallel" />
       </list>
     </option>
   </component>
@@ -310,17 +313,17 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/MySpace/Coding/RetrofitAPIForWork/RetrofitAPIForWork&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/MySpace/Coding/UIAutoTests/UIAutoTest",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest\src\test\resources\features\UI" />
@@ -409,7 +412,22 @@
     <configuration name="UIAutoTest  Nonparallel" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="17" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
             <option name="profiles">
@@ -698,7 +716,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664207733527</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="изменил пом для аллур">
+      <created>1664287948283</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287948283</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -829,7 +854,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Добавление зависимостей с кукумбером и селениумом" />
     <MESSAGE value="Добавление утилиты для парсинга свойств" />
     <MESSAGE value="Конфигурирование Maven:&#10;параллельный и непараллельный запуск.&#10;Аллур отчет" />
     <MESSAGE value="Инструкции" />
@@ -854,7 +878,8 @@
     <MESSAGE value="УБрал бесполезные кастомные элементы" />
     <MESSAGE value="Добавил методы для работы с ссылками" />
     <MESSAGE value="Добавил методы для работы с кнопками" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил методы для работы с кнопками" />
+    <MESSAGE value="изменил пом для аллур" />
+    <option name="LAST_COMMIT_MESSAGE" value="изменил пом для аллур" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

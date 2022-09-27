@@ -50,6 +50,7 @@ public class DriverActions {
     /**
      * Инициализация вебдрайвера
      * @return экземпляр веб драйвераа*/
+    @SuppressWarnings("deprecated")
     private WebDriver getWebDriverByType(BrowserType driverType) {
         WebDriver driver;
         switch (driverType) {
