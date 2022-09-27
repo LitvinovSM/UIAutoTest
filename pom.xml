@@ -17,7 +17,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
-        <aspectj.version>1.8.10</aspectj.version>
+        <aspectj.version>1.9.7</aspectj.version>
         <allure-junit5.version>2.18.1</allure-junit5.version>
         <allure.version>2.10.0</allure.version>
         <selenium.versions>3.14.0</selenium.versions>
@@ -91,6 +91,11 @@
             <version>${allure-junit5.version}</version>
         </dependency>
         <!--Дополнительные зависимости для Allure-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -170,13 +175,6 @@
                                     </property>
                                 </systemProperties>
                             </configuration>
-                            <dependencies>
-                                <dependency>
-                                    <groupId>org.aspectj</groupId>
-                                    <artifactId>aspectjweaver</artifactId>
-                                    <version>${aspectj.version}</version>
-                                </dependency>
-                            </dependencies>
                         </plugin>
                         <plugin>
                             <groupId>io.qameta.allure</groupId>
@@ -266,13 +264,6 @@
                                 </property>
                             </systemProperties>
                         </configuration>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.aspectj</groupId>
-                                <artifactId>aspectjweaver</artifactId>
-                                <version>${aspectj.version}</version>
-                            </dependency>
-                        </dependencies>
                     </plugin>
                     <plugin>
                         <groupId>io.qameta.allure</groupId>
