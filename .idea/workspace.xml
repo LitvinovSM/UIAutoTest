@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="убрал полностью allure отчет">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="прикрутил работающий локально">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,11 +105,6 @@
     <option name="enabledProfiles">
       <list>
         <option value="NonParallel" />
-      </list>
-    </option>
-    <option name="disabledProfiles">
-      <list>
-        <option value="parallel" />
       </list>
     </option>
   </component>
@@ -742,7 +735,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664443499046</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="прикрутил работающий локально">
+      <created>1664449395084</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664449395084</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -873,7 +873,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Инструкции" />
     <MESSAGE value="еще инструкции" />
     <MESSAGE value="Восстановил проект, проапдейтил зависимости" />
     <MESSAGE value="Больше драйверов и обновленный селениум" />
@@ -898,7 +897,8 @@
     <MESSAGE value="изменил пом для аллур" />
     <MESSAGE value="Прикрутил аллюр по нормальному" />
     <MESSAGE value="убрал полностью allure отчет" />
-    <option name="LAST_COMMIT_MESSAGE" value="убрал полностью allure отчет" />
+    <MESSAGE value="прикрутил работающий локально" />
+    <option name="LAST_COMMIT_MESSAGE" value="прикрутил работающий локально" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

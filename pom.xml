@@ -20,6 +20,10 @@
         <aspectj.version>1.9.9.1</aspectj.version>
         <selenium.versions>3.14.0</selenium.versions>
         <cucumber.versions>7.8.0</cucumber.versions>
+        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+        <allure.report.directory>${project.build.directory}/site/allure-maven-plugin</allure.report.directory>
+        <allure.download.url>https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip</allure.download.url>
+        <allure.maven.version>2.10.0</allure.maven.version>
     </properties>
 
     <dependencies>
@@ -113,9 +117,8 @@
             <artifactId>jaxb-api</artifactId>
             <version>2.3.1</version>
         </dependency>
-
         <!-- конец аллур-->
-
+        <!--Зависимости для конфиг файла-->
         <dependency>
             <groupId>com.typesafe</groupId>
             <artifactId>config</artifactId>
@@ -142,7 +145,7 @@
                     </argLine>
                     <systemPropertyVariables>
                         <allure.results.directory>
-                            ${project.build.directory}/allure-results
+                            ${allure.results.directory}
                         </allure.results.directory>
                     </systemPropertyVariables>
                 </configuration>
@@ -157,13 +160,13 @@
                 <plugin>
                     <groupId>io.qameta.allure</groupId>
                     <artifactId>allure-maven</artifactId>
-                    <version>2.10.0</version>
+                    <version>${allure.maven.version}</version>
                     <configuration>
                         <allureDownloadUrl>
-                            https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
+                            ${allure.download.url}
                         </allureDownloadUrl>
-                        <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
-                        <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>
+                        <resultsDirectory>${allure.results.directory}</resultsDirectory>
+                        <reportDirectory>${allure.report.directory}</reportDirectory>
                     </configuration>
                 </plugin>
             </plugins>
@@ -194,6 +197,11 @@
                                     -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                                     -Dcucumber.options="--plugin io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
                                 </argLine>
+                                <systemPropertyVariables>
+                                    <allure.results.directory>
+                                        ${allure.results.directory}
+                                    </allure.results.directory>
+                                </systemPropertyVariables>
                             </configuration>
                             <dependencies>
                                 <dependency>
@@ -206,13 +214,13 @@
                         <plugin>
                             <groupId>io.qameta.allure</groupId>
                             <artifactId>allure-maven</artifactId>
-                            <version>2.10.0</version>
+                            <version>${allure.maven.version}</version>
                             <configuration>
                                 <allureDownloadUrl>
-                                    https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
+                                    ${allure.download.url}
                                 </allureDownloadUrl>
-                                <resultsDirectory>${project.build.directory}/surefire-reports</resultsDirectory>
-                                <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>
+                                <resultsDirectory>${allure.results.directory}</resultsDirectory>
+                                <reportDirectory>${allure.report.directory}</reportDirectory>
                             </configuration>
                         </plugin>
                     </plugins>
@@ -220,77 +228,94 @@
             </build>
         </profile>
 
-
-        <profile>
-            <!--Профиль параллельного запуска-->
-            <id>parallel</id>
-            <!--Активация по умолчанию-->
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.github.temyers</groupId>
-                        <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-                        <version>5.0.0</version>
-                        <executions>
-                            <execution>
-                                <id>generateRunners</id>
-                                <phase>generate-test-sources</phase>
-                                <goals>
-                                    <goal>generateRunners</goal>
-                                </goals>
-                                <configuration>
-                                    <tags>
-                                        <!--suppress UnresolvedMavenProperty -->
-                                        <!--Свойство, по которым Maven определит какие тесты собирать. Прописывать как test -Dtags=@all. ВНИМАНИЕ: Регистрочувствительно-->
-                                        <tag>${tags}</tag>
-                                    </tags>
-                                    <glue>
-                                        <!--Пакет с шагами тестов-->
-                                        <package>autotests</package>
-                                    </glue>
-                                    <outputDirectory>target/generated-test-sources/cucumber</outputDirectory>
-                                    <featuresDirectory>src/test/resources/</featuresDirectory>
-                                    <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
-                                    <namingPattern>Parallel{c}IT</namingPattern>
-                                    <!-- One of [SCENARIO, FEATURE]. SCENARIO generates one runner per scenario.  FEATURE generates a runner per feature. -->
-                                    <parallelScheme>SCENARIO</parallelScheme>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>${maven-surefire-plugin.version}</version>
-                        <configuration>
-                            <!--Количество перезапусков упавших тестов - борьба с нестабильностью теста-->
-                            <rerunFailingTestsCount>2</rerunFailingTestsCount>
-                            <!--Количество потоков-->
-                            <forkCount>4</forkCount>
-                            <!--Признак переиспользования потоков-->
-                            <reuseForks>false</reuseForks>
-                            <!--Название классов которые запускать. В namingPattern хранится то, как классы будут создаваться-->
-                            <includes>**/*IT.class</includes>
-                            <testFailureIgnore>false</testFailureIgnore>
-                            <!--suppress UnresolvedMavenProperty -->
-                            <argLine>
-                                -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                                -Dcucumber.options="--plugin pretty"
-                            </argLine>
-                            <!--Аллур отчет для параллельных тестов-->
-                            <systemProperties>
-                                <property>
-                                    <name>junit.jupiter.extensions.autodetection.enabled</name>
-                                    <value>true</value>
-                                </property>
-                            </systemProperties>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
+<!--Данная секция не поддерживается кукумбером 7-->
+<!--        <profile>-->
+<!--            &lt;!&ndash;Профиль параллельного запуска&ndash;&gt;-->
+<!--            <id>parallel</id>-->
+<!--            &lt;!&ndash;Активация по умолчанию&ndash;&gt;-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
+<!--            <build>-->
+<!--                <plugins>-->
+<!--                    <plugin>-->
+<!--                        <groupId>com.github.temyers</groupId>-->
+<!--                        <artifactId>cucumber-jvm-parallel-plugin</artifactId>-->
+<!--                        <version>5.0.0</version>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>generateRunners</id>-->
+<!--                                <phase>generate-test-sources</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>generateRunners</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <tags>-->
+<!--                                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                                        &lt;!&ndash;Свойство, по которым Maven определит какие тесты собирать. Прописывать как test -Dtags=@all. ВНИМАНИЕ: Регистрочувствительно&ndash;&gt;-->
+<!--                                        <tag>${tags}</tag>-->
+<!--                                    </tags>-->
+<!--                                    <glue>-->
+<!--                                        &lt;!&ndash;Пакет с шагами тестов&ndash;&gt;-->
+<!--                                        <package>autotests</package>-->
+<!--                                    </glue>-->
+<!--                                    <outputDirectory>target/generated-test-sources/cucumber</outputDirectory>-->
+<!--                                    <featuresDirectory>src/test/resources/</featuresDirectory>-->
+<!--                                    <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>-->
+<!--                                    <namingPattern>Parallel{c}IT</namingPattern>-->
+<!--                                    &lt;!&ndash; One of [SCENARIO, FEATURE]. SCENARIO generates one runner per scenario.  FEATURE generates a runner per feature. &ndash;&gt;-->
+<!--                                    <parallelScheme>SCENARIO</parallelScheme>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                        <version>${maven-surefire-plugin.version}</version>-->
+<!--                        <configuration>-->
+<!--                            &lt;!&ndash;Количество перезапусков упавших тестов - борьба с нестабильностью теста&ndash;&gt;-->
+<!--                            <rerunFailingTestsCount>2</rerunFailingTestsCount>-->
+<!--                            &lt;!&ndash;Количество потоков&ndash;&gt;-->
+<!--                            <forkCount>4</forkCount>-->
+<!--                            &lt;!&ndash;Признак переиспользования потоков&ndash;&gt;-->
+<!--                            <reuseForks>false</reuseForks>-->
+<!--                            &lt;!&ndash;Название классов которые запускать. В namingPattern хранится то, как классы будут создаваться&ndash;&gt;-->
+<!--                            <includes>**/*IT.class</includes>-->
+<!--                            <testFailureIgnore>false</testFailureIgnore>-->
+<!--                            &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                            <argLine>-->
+<!--                                -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"-->
+<!--                                -Dcucumber.options="&#45;&#45;plugin io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"-->
+<!--                            </argLine>-->
+<!--                            <systemPropertyVariables>-->
+<!--                                <allure.results.directory>-->
+<!--                                    ${project.build.directory}/allure-results-->
+<!--                                </allure.results.directory>-->
+<!--                            </systemPropertyVariables>-->
+<!--                        </configuration>-->
+<!--                        <dependencies>-->
+<!--                            <dependency>-->
+<!--                                <groupId>org.aspectj</groupId>-->
+<!--                                <artifactId>aspectjweaver</artifactId>-->
+<!--                                <version>${aspectj.version}</version>-->
+<!--                            </dependency>-->
+<!--                        </dependencies>-->
+<!--                    </plugin>-->
+<!--                    <plugin>-->
+<!--                        <groupId>io.qameta.allure</groupId>-->
+<!--                        <artifactId>allure-maven</artifactId>-->
+<!--                        <version>2.10.0</version>-->
+<!--                        <configuration>-->
+<!--                            <allureDownloadUrl>-->
+<!--                                https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip-->
+<!--                            </allureDownloadUrl>-->
+<!--                            <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>-->
+<!--                            <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
+<!--                </plugins>-->
+<!--            </build>-->
+<!--        </profile>-->
     </profiles>
 </project>
