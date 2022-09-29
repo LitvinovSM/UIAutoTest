@@ -17,9 +17,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
-        <aspectj.version>1.9.7</aspectj.version>
-        <allure-junit5.version>2.18.1</allure-junit5.version>
-        <allure.version>2.10.0</allure.version>
+        <aspectj.version>1.9.9.1</aspectj.version>
         <selenium.versions>3.14.0</selenium.versions>
         <cucumber.versions>7.8.0</cucumber.versions>
     </properties>
@@ -86,32 +84,6 @@
         </dependency>
         <!--Allure отчеты-->
         <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-junit5</artifactId>
-            <version>${allure-junit5.version}</version>
-        </dependency>
-        <!--Дополнительные зависимости для Allure-->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>${aspectj.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.5</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
-        </dependency>
-        <dependency>
             <groupId>com.typesafe</groupId>
             <artifactId>config</artifactId>
             <version>1.4.2</version>
@@ -122,26 +94,6 @@
             <version>1.18.24</version>
         </dependency>
     </dependencies>
-    <!--Раздел для локального просмотра Allure отчетов-->
-    <!--    как установить сертификат, чтоб избежать ошибку про ssl:-->
-    <!--    1) скачайте сертификат гитхаба (кликать по замку возле http и выкачать сертификат в файл-->
-    <!--    2) выполнить команду аналогичную этой, со своим путем до java и сертификата: keytool -import  -noprompt   -trustcacerts   -alias github   -file C:/github.cert.cer   -keystore "C:\Program Files\Java\jdk-17.0.4\lib\security\cacert"  -storepass changeit-->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>${allure.version}</version>
-                <configuration>
-                    <allureDownloadUrl>
-                        https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
-                    </allureDownloadUrl>
-                    <resultsDirectory>${project.build.directory}/surefire-reports</resultsDirectory>
-                    <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
     <profiles>
         <profile>
@@ -171,26 +123,9 @@
                                         <name>junit.jupiter.extensions.autodetection.enabled</name>
                                         <value>true</value>
                                     </property>
-                                    <property>
-                                        <name>allure.results.directory</name>
-                                        <value>${project.build.directory}/allure-results</value>
-                                    </property>
                                 </systemProperties>
                             </configuration>
                         </plugin>
-                        <plugin>
-                            <groupId>io.qameta.allure</groupId>
-                            <artifactId>allure-maven</artifactId>
-                            <version>${allure.version}</version>
-                            <configuration>
-                                <allureDownloadUrl>
-                                    https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
-                                </allureDownloadUrl>
-                                <resultsDirectory>${project.build.directory}/surefire-reports</resultsDirectory>
-                                <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>
-                            </configuration>
-                        </plugin>
-                        <!--Конец Allure плагина-->
                     </plugins>
                 </pluginManagement>
             </build>
@@ -262,23 +197,7 @@
                                     <name>junit.jupiter.extensions.autodetection.enabled</name>
                                     <value>true</value>
                                 </property>
-                                <property>
-                                    <name>allure.results.directory</name>
-                                    <value>${project.build.directory}/target/allure-results</value>
-                                </property>
                             </systemProperties>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>io.qameta.allure</groupId>
-                        <artifactId>allure-maven</artifactId>
-                        <version>${allure.version}</version>
-                        <configuration>
-                            <allureDownloadUrl>
-                                https://github.com/allure-framework/allure2/releases/download/2.18.1/allure-2.18.1.zip
-                            </allureDownloadUrl>
-                            <resultsDirectory>${project.build.directory}/surefire-reports</resultsDirectory>
-                            <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>
                         </configuration>
                     </plugin>
                 </plugins>

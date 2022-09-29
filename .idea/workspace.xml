@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="изменил пом для аллур">
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Прикрутил аллюр по нормальному">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/commonWrappers/DriverActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +102,11 @@
         <option name="downloadSourcesAutomatically" value="true" />
         <option name="jdkForImporter" value="17" />
       </MavenImportingSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="NonParallel" />
+      </list>
     </option>
     <option name="disabledProfiles">
       <list>
@@ -343,7 +347,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.UIAutoTest  Nonparallel">
+  <component name="RunManager" selected="JUnit.Cucumber Test">
     <configuration name="Feature: Проверка главной страницы рамблер" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" />
@@ -723,7 +727,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664287948283</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Прикрутил аллюр по нормальному">
+      <created>1664302879464</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1664302879464</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -854,7 +865,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Добавление утилиты для парсинга свойств" />
     <MESSAGE value="Конфигурирование Maven:&#10;параллельный и непараллельный запуск.&#10;Аллур отчет" />
     <MESSAGE value="Инструкции" />
     <MESSAGE value="еще инструкции" />
@@ -879,7 +889,8 @@
     <MESSAGE value="Добавил методы для работы с ссылками" />
     <MESSAGE value="Добавил методы для работы с кнопками" />
     <MESSAGE value="изменил пом для аллур" />
-    <option name="LAST_COMMIT_MESSAGE" value="изменил пом для аллур" />
+    <MESSAGE value="Прикрутил аллюр по нормальному" />
+    <option name="LAST_COMMIT_MESSAGE" value="Прикрутил аллюр по нормальному" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
