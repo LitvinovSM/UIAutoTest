@@ -8,7 +8,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty"},
+        plugin = {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
         features = "src/test/resources/features", // путь к фичам
         glue = "autotests", // пакет с шагами
         tags = "@1", // тэги запуска

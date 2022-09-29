@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="Прикрутил аллюр по нормальному">
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="убрал полностью allure отчет">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -734,7 +735,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664302879464</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="убрал полностью allure отчет">
+      <created>1664443499046</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1664443499046</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -865,7 +873,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Конфигурирование Maven:&#10;параллельный и непараллельный запуск.&#10;Аллур отчет" />
     <MESSAGE value="Инструкции" />
     <MESSAGE value="еще инструкции" />
     <MESSAGE value="Восстановил проект, проапдейтил зависимости" />
@@ -890,7 +897,8 @@
     <MESSAGE value="Добавил методы для работы с кнопками" />
     <MESSAGE value="изменил пом для аллур" />
     <MESSAGE value="Прикрутил аллюр по нормальному" />
-    <option name="LAST_COMMIT_MESSAGE" value="Прикрутил аллюр по нормальному" />
+    <MESSAGE value="убрал полностью allure отчет" />
+    <option name="LAST_COMMIT_MESSAGE" value="убрал полностью allure отчет" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

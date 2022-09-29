@@ -2,6 +2,7 @@ package autotests.UI.pages.main;
 
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.И;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -10,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MainActions extends MainElements {
-    //@Step("'главная страница' открывает URL {URL}")
+    @Step("'главная страница' открывает URL {URL}")
     @Дано("'главная страница' открывает URL {string}")
     public void openPageByURL(String URL){
         webDriver.get(URL);
