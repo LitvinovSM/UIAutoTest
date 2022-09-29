@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import java.util.HashMap;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class BaseActions extends BasePage {
 
@@ -22,12 +22,10 @@ public class BaseActions extends BasePage {
      * @return link as a web element
      */
     public WebElement getLinkByText(String text) {
-        try {
-            return webDriver.findElement(By.xpath(String.format("//a[text()='%s']", text)));
-        } catch (NoSuchElementException e) {
-            fail(String.format("Ссылка c текстом %s не найдена на странице", text));
-            return null;
-        }
+        assertDoesNotThrow(() -> {
+            webDriver.findElement(By.xpath(String.format("//a[text()='%s']", text)));
+        }, String.format("Ссылка c текстом %s не найдена на странице", text));
+        return webDriver.findElement(By.xpath(String.format("//a[text()='%s']", text)));
     }
 
     /**
@@ -37,12 +35,10 @@ public class BaseActions extends BasePage {
      * @return list of links as a web elements
      */
     public List<WebElement> getLinksByText(String text) {
-        try {
-            return webDriver.findElements(By.xpath(String.format("//a[text()='%s']", text)));
-        } catch (NoSuchElementException e) {
-            fail(String.format("Ссылки c текстом %s не найдены на странице", text));
-            return null;
-        }
+        assertDoesNotThrow(() -> {
+            webDriver.findElements(By.xpath(String.format("//a[text()='%s']", text)));
+        }, String.format("Ссылки c текстом %s не найдены на странице", text));
+        return webDriver.findElements(By.xpath(String.format("//a[text()='%s']", text)));
     }
 
     /**
@@ -52,12 +48,11 @@ public class BaseActions extends BasePage {
      * @return link as a web element
      */
     public WebElement getLinkContainsText(String partOfText) {
-        try {
-            return webDriver.findElement(By.xpath(String.format("//a[contains(text(),'%s')]", partOfText)));
-        } catch (NoSuchElementException e) {
-            fail(String.format("Ссылка содержащая текст %s не найдена на странице", partOfText));
-            return null;
-        }
+        assertDoesNotThrow(() -> {
+            webDriver.findElement(By.xpath(String.format("//a[contains(text(),'%s')]", partOfText)));
+        }, String.format("Ссылка содержащая текст %s не найдена на странице", partOfText));
+
+        return webDriver.findElement(By.xpath(String.format("//a[contains(text(),'%s')]", partOfText)));
     }
 
     /**
@@ -68,12 +63,10 @@ public class BaseActions extends BasePage {
      * @return link as a web element
      */
     public WebElement getLinkByTextInElement(WebElement targetElement, String text) {
-        try {
-            return targetElement.findElement(By.xpath(String.format(".//a[text()='%s']", text)));
-        } catch (NoSuchElementException e) {
-            fail(String.format("Ссылка с текстом %s не найдена в вебэлементе %s", text, targetElement));
-            return null;
-        }
+        assertDoesNotThrow(() -> {
+            targetElement.findElement(By.xpath(String.format(".//a[text()='%s']", text)));
+        }, String.format("Ссылка с текстом %s не найдена в элементе %s", text, targetElement));
+        return targetElement.findElement(By.xpath(String.format(".//a[text()='%s']", text)));
     }
 
     public boolean isRealDisplayed(WebElement element) {
@@ -92,12 +85,10 @@ public class BaseActions extends BasePage {
      * @return button as a web element
      */
     public WebElement getButtonContainsText(String partOfText) {
-        try {
-            return webDriver.findElement(By.xpath(String.format("//button[descendant-or-self::*[contains(text(),'%s')]]", partOfText)));
-        } catch (NoSuchElementException e) {
-            fail(String.format("Не удалось найти кнопку с текстом %s", partOfText));
-            return null;
-        }
+        assertDoesNotThrow(() -> {
+            webDriver.findElement(By.xpath(String.format("//button[descendant-or-self::*[contains(text(),'%s')]]", partOfText)));
+        }, String.format("Не удалось найти кнопку с текстом %s", partOfText));
+        return webDriver.findElement(By.xpath(String.format("//button[descendant-or-self::*[contains(text(),'%s')]]", partOfText)));
     }
 
     /**
@@ -107,11 +98,9 @@ public class BaseActions extends BasePage {
      * @return button as a web element
      */
     public WebElement getButtonByTextInElement(WebElement targetElement, String partOfText) {
-        try {
-            return targetElement.findElement(By.xpath(String.format(".//button[descendant-or-self::*[contains(text(),'%s')]]", partOfText)));
-        } catch (NoSuchElementException e) {
-            fail(String.format("Кнопка с текстом %s не найдена в вебэлементе %s", partOfText, targetElement));
-            return null;
-        }
+        assertDoesNotThrow(() -> {
+            targetElement.findElement(By.xpath(String.format(".//button[descendant-or-self::*[contains(text(),'%s')]]", partOfText)));
+        }, String.format("Кнопка с текстом %s не найдена в вебэлементе %s", partOfText, targetElement));
+        return targetElement.findElement(By.xpath(String.format(".//button[descendant-or-self::*[contains(text(),'%s')]]", partOfText)));
     }
 }
