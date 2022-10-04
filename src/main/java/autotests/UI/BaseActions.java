@@ -1,8 +1,7 @@
 package autotests.UI;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+import io.qameta.allure.Attachment;
+import org.openqa.selenium.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -102,5 +101,10 @@ public class BaseActions extends BasePage {
             targetElement.findElement(By.xpath(String.format(".//button[descendant-or-self::*[contains(text(),'%s')]]", partOfText)));
         }, String.format("Кнопка с текстом %s не найдена в вебэлементе %s", partOfText, targetElement));
         return targetElement.findElement(By.xpath(String.format(".//button[descendant-or-self::*[contains(text(),'%s')]]", partOfText)));
+    }
+
+    @Attachment(value = "Screenshot", type = "image/png")
+    public byte[] screenshot() {
+        return ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BYTES);
     }
 }

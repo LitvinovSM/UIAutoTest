@@ -23,7 +23,7 @@ public class BeforeAndAfterSteps {
      * 3) инициализация wait */
 
     @BeforeAll
-    public static void bef() throws Exception {
+    public static void setUp() throws Exception {
         threadLocalDriver.set(new DriverActions().getDriver());
         webDriver = threadLocalDriver.get();
         wait = getWebDriverWait();
@@ -31,9 +31,9 @@ public class BeforeAndAfterSteps {
 
     /**
      * Шаги после:
-     * 1) Закрытие инстанса webDriver */
-    @AfterAll
-    public static void after(){
+     * 1) Скриншот */
+    @AfterAll (order = 3)
+    public static void tearDown(){
         threadLocalDriver.get().quit();
     }
 }
