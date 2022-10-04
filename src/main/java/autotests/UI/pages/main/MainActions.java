@@ -3,8 +3,6 @@ package autotests.UI.pages.main;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.И;
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.function.Executable;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 

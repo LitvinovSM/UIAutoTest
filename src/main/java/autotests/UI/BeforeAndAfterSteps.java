@@ -1,13 +1,8 @@
 package autotests.UI;
 
 import autotests.UI.commonWrappers.DriverActions;
-import io.cucumber.java.*;
-import io.qameta.allure.Allure;
-import io.qameta.allure.Attachment;
-import io.qameta.allure.model.Status;
-import io.qameta.allure.model.StepResult;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

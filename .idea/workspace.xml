@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="поправил методы и внутренние ассерты">
+    <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="исправил предварительные и заключительные шаги с @BeforeAll и @AfterAll на @Before и @After чтобы они отображались в алюр отчете">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BeforeAndAfterSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BeforeAndAfterSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,17 +312,17 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/MySpace/Coding/UIAutoTests/UIAutoTest&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/MySpace/Coding/RetrofitAPIForWork/RetrofitAPIForWork",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\MySpace\Coding\UIAutoTests\UIAutoTest\src\test\resources\features\UI" />
@@ -766,7 +764,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664877279646</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="исправил предварительные и заключительные шаги с @BeforeAll и @AfterAll на @Before и @After чтобы они отображались в алюр отчете">
+      <created>1664880396445</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1664880396445</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -897,7 +902,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Больше драйверов и обновленный селениум" />
     <MESSAGE value="Добавление удаленного вебдрайвера" />
     <MESSAGE value="фиксы" />
     <MESSAGE value="рабочий докер" />
@@ -922,7 +926,8 @@
     <MESSAGE value="прикрутил работающий локально" />
     <MESSAGE value="прикрутил нормально аллюр. отключил параллельный профиль т.к. он не работает вместе с параллель плагином." />
     <MESSAGE value="поправил методы и внутренние ассерты" />
-    <option name="LAST_COMMIT_MESSAGE" value="поправил методы и внутренние ассерты" />
+    <MESSAGE value="исправил предварительные и заключительные шаги с @BeforeAll и @AfterAll на @Before и @After чтобы они отображались в алюр отчете" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправил предварительные и заключительные шаги с @BeforeAll и @AfterAll на @Before и @After чтобы они отображались в алюр отчете" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
