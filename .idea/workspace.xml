@@ -7,8 +7,8 @@
     <list default="true" id="1e46446c-13ef-475f-a4a2-7bb6cc6d69c8" name="Default Changelist" comment="поправил методы и внутренние ассерты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/BeforeAndAfterSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/BeforeAndAfterSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autotests/UI/pages/main/MainActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UI/Проверка главной страницы рамблер.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -759,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664456080560</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="поправил методы и внутренние ассерты">
+      <created>1664877279646</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1664877279646</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">

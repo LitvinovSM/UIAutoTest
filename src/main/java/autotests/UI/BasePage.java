@@ -17,8 +17,8 @@ public class BasePage {
     public BasePage(){
         PageFactory.initElements(webDriver, this);
     }
-    public WebDriver webDriver = BeforeAndAfterSteps.webDriver;
-    public WebDriverWait wait = BeforeAndAfterSteps.wait;
+    public static WebDriver webDriver = BeforeAndAfterSteps.webDriver;
+    public static WebDriverWait wait = BeforeAndAfterSteps.wait;
 
     public HashMap<String, WebElement> webElementMap;
 }

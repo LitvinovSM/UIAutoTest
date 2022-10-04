@@ -103,8 +103,11 @@ public class BaseActions extends BasePage {
         return targetElement.findElement(By.xpath(String.format(".//button[descendant-or-self::*[contains(text(),'%s')]]", partOfText)));
     }
 
+    /**
+     * Taking a screenshot and attach it to allure report
+     * @return screenshot of the target instance of web driver*/
     @Attachment(value = "Screenshot", type = "image/png")
-    public byte[] screenshot() {
+    public static byte[] screenshot() {
         return ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BYTES);
     }
 }
